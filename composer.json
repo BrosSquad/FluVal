@@ -1,0 +1,23 @@
+{
+    "name": "dusan/php-mvc-fluent-validation",
+    "description": "Fluent validation for PhpMvc",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Dusan Malusev",
+            "email": "dusan.998@outlook.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^2.16",
+        "nikic/php-parser": "^4.2"
+    },
+    "autoload": {
+        "files": [
+            "src/validation.php"
+        ],
+        "psr-4": {
+            "Dusan\\PhpMvc\\Validation\\": "src"
+        }
+    }
+}
