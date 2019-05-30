@@ -10,7 +10,8 @@
     ],
     "require": {
         "nesbot/carbon": "^2.16",
-        "nikic/php-parser": "^4.2"
+        "nikic/php-parser": "^4.2",
+        "dusan/php-mvc-collections": "1.0"
     },
     "autoload": {
         "files": [
@@ -19,5 +20,12 @@
         "psr-4": {
             "Dusan\\PhpMvc\\Validation\\": "src"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "branch": "master",
+            "url": "https://github.com/malusev998/PhpMvc-Collections.git"
+        }
+    ]
 }

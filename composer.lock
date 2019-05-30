@@ -4,8 +4,34 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3e032171be27d072846dbc0e1427dee",
+    "content-hash": "03a16e32688332280d03d353a391a7c1",
     "packages": [
+        {
+            "name": "dusan/php-mvc-collections",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/malusev998/PhpMvc-Collections.git",
+                "reference": "2f23b1ad09723c724fad4e5e057cf299f24fff8d"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dusan\\PhpMvc\\Collections\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Dusan Malusev",
+                    "email": "dusan.998@outlook.com"
+                }
+            ],
+            "description": "Collections for PhpMvc framework",
+            "time": "2019-05-28T20:33:46+00:00"
+        },
         {
             "name": "nesbot/carbon",
             "version": "2.18.0",
