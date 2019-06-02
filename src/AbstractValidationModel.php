@@ -20,7 +20,6 @@ abstract class AbstractValidationModel
      * @param string $name
      *
      * @return mixed
-     * @throws \Dusan\PhpMvc\Exceptions\PropertyNotFound
      */
     public function __get(string $name)
     {
@@ -39,7 +38,7 @@ abstract class AbstractValidationModel
      * @param string $name
      * @param mixed  $value
      *
-     * @throws \Dusan\PhpMvc\Exceptions\PropertyNotFound
+     * @throws \Dusan\PhpMvc\Validation\Exceptions\PropertyNotFound
      */
     public function __set(string $name, $value)
     {

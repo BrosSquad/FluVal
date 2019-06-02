@@ -12,10 +12,11 @@ trait MemberWithDash
      * @return string
      */
     protected function memberWithDash(string $name) {
-        $member = explode('_', $name);
-        if(count($member) === 2) {
-            $name = ucfirst($member[0]) . ucfirst($member[1]);
+        $members = explode('_', $name);
+        $newName = '';
+        foreach($members as $member) {
+            $newName .= ucfirst($member);
         }
-        return $name;
+        return $newName;
     }
 }
