@@ -9,9 +9,9 @@
         }
     ],
     "require": {
+        "php": ">=7.3.0",
         "ext-ctype": "*",
         "nesbot/carbon": "^2.18.0",
-        "nikic/php-parser": "^4.2.2",
         "dusan/php-mvc-collections": "1.0"
     },
     "require-dev": {

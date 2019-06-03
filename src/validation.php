@@ -11,7 +11,7 @@ namespace Dusan\PhpMvc\Validation;
  * These validators are ment to be uses in request validation, not in actual ValidationModels
  * Is you want Validation inside the ValidationModel use Fluent Validation which is more powerful and better
  * than it's counterpart Request validators
- * @see     \Dusan\PhpMvc\Validation\Fluent\ModelValidator
+ * @see     \Dusan\PhpMvc\Validation\FluentOLD\ModelValidator
  * <b> Fluent validation will be available in version 2</b>
  * <b>How to write custom validators</b>
  * <p>
@@ -34,7 +34,7 @@ namespace Dusan\PhpMvc\Validation;
  */
 
 use Carbon\Carbon;
-use Dusan\PhpMvc\Regex\Pattern;
+use Error;
 
 /**
  * Checks if the string is numeric
@@ -407,8 +407,10 @@ function betweenEqual($start, $end, $msg = '')
 function match($regex, $flags = '', $msg = '')
 {
     return function (Validator $validator, $item) use ($regex, $flags, $msg) {
-        $pattern = new Pattern($regex, $flags);
-        return $pattern->matches($item) ? null : $msg;
+        if(($match = preg_match('#'.$regex.'#'. $flags, $item) === false)) {
+            throw new Error('Regex is not valid');
+        }
+        return  $match === false ?  $msg : NULL;
     };
 }
 
@@ -517,7 +519,7 @@ function afterDate(Carbon $date, string $format = 'Y-m-d H:i:s', $msg = '')
 function dateFormat($format, $msg = 'Input date must be of correct format')
 {
     return function (Validator $validator, $item) use ($format, $msg) {
-        return $validator->isDateFormat($item, $format) ? null : $msg;
+        return $validator->hasDateTimeFormat($item, $format) ? null : $msg;
     };
 }
 
