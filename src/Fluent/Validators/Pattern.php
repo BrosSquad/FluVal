@@ -4,7 +4,7 @@
 namespace Dusan\PhpMvc\Validation\Fluent\Validators;
 
 
-use PhpParser\Error;
+use \Error;
 
 class Pattern extends AbstractFluentValidator
 {
