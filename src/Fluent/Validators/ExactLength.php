@@ -26,7 +26,7 @@ class ExactLength extends AbstractFluentValidator
      */
     public function validate($value): bool
     {
-        if ($this->optional() === true) {
+        if ($this->optional($value) === true) {
             return true;
         }
         if (is_string($value)) {

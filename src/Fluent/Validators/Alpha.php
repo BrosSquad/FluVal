@@ -8,6 +8,6 @@ class Alpha extends AbstractFluentValidator
 {
     public function validate($value): bool
     {
-        return $this->optional() ?? ctype_alpha($value);
+        return $this->optional($value) ?? ctype_alpha($value);
     }
 }

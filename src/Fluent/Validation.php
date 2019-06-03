@@ -4,18 +4,18 @@ declare(strict_types=1);
 namespace Dusan\PhpMvc\Validation\Fluent;
 
 
-use Dusan\PhpMvc\Validation\Fluent\Validators\{
-    Alpha,
+use Dusan\PhpMvc\Validation\Fluent\Validators\{Alpha,
     AlphaNumeric,
     Between,
+    Accepted,
     Email,
     ExactLength,
     FloatingPoint,
     Integer,
+    Max,
     Min,
     NotEmpty,
-    Pattern
-};
+    Pattern};
 
 /**
  * Class Validation
@@ -110,7 +110,7 @@ class Validation
      */
     public final function max($max): Validation
     {
-        return $this->customValidator(new Min($max), 'Value must be smaller than ' . $max);
+        return $this->customValidator(new Max($max), 'Value must be smaller than ' . $max);
     }
 
     /**
@@ -197,6 +197,10 @@ class Validation
     public final function int(): Validation
     {
         return $this->customValidator(new Integer(), 'Value must be integer');
+    }
+
+    public final function accepted(): Validation {
+        return $this->customValidator(new Accepted(), 'Value must be 1, yes, on or true');
     }
 
     /**

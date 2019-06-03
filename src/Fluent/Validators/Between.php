@@ -25,10 +25,10 @@ class Between extends AbstractFluentValidator
 
     public function validate($value): bool
     {
-        if($this->optional() === true) {
+        if($this->optional($value) === true) {
             return true;
         }
-        return (new Min($value, $this->min))->validate() &&
-            (new Max($value, $this->max))->validate();
+        return (new Min($this->min))->validate($value) &&
+            (new Max($this->max))->validate($value);
     }
 }

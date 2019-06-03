@@ -7,6 +7,6 @@ class LowerCase extends AbstractFluentValidator
 {
     public function validate($value): bool
     {
-        return $this->optional() ?? ctype_lower($value);
+        return $this->optional($value) ?? ctype_lower($value);
     }
 }

@@ -11,7 +11,7 @@ class Max extends AbstractFluentValidator
 
     public function __construct($max)
     {
-        if(!is_int($max) || !is_float($max)) {
+        if(!is_numeric($max)) {
             throw new TypeError('$max must be integer or float');
         }
         $this->max = $max;
@@ -19,7 +19,7 @@ class Max extends AbstractFluentValidator
 
     public function validate($value): bool
     {
-        if($this->optional() === true) {
+        if($this->optional($value) === true) {
             return true;
         }
         if(is_numeric($value)) {

@@ -22,13 +22,11 @@ class Min extends AbstractFluentValidator
     /**
      * MinLength constructor.
      *
-     * @param string|array     $value
      * @param int|float|double $min
-     * @throws TypeError
      */
     public function __construct($min)
     {
-        if(!is_float($min) || !is_int($min)) {
+        if(!is_numeric($min)) {
             throw new TypeError('Min must be number');
         }
         $this->min = $min;
@@ -40,7 +38,7 @@ class Min extends AbstractFluentValidator
      */
     public function validate($value): bool
     {
-        if ($this->optional() === true) {
+        if ($this->optional($value) === true) {
             return true;
         } else if (is_string($value)) {
             return mb_strlen($value) > $this->min;

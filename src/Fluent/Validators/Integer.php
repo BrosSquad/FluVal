@@ -9,6 +9,6 @@ class Integer extends AbstractFluentValidator
 
     public function validate($value): bool
     {
-        return is_int($value);
+        return $this->optional($value) ?? is_int($value);
     }
 }

@@ -8,10 +8,10 @@ use Dusan\PhpMvc\Validation\AbstractValidationModel;
 
 /**
  * Class FluentValidator
- *
+ * @example "../../docs/Fluent/UserFluentValidator.php"
  * @package Dusan\PhpMvc\Validation\Fluent
  */
-class FluentValidator
+abstract class FluentValidator
 {
     /**
      * If error occurred it will be added into errors and validation

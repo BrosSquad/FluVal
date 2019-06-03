@@ -7,6 +7,6 @@ class HexNumber extends AbstractFluentValidator
 {
     public function validate($value): bool
     {
-        return $this->optional() ?? ctype_xdigit($value);
+        return $this->optional($value) ?? ctype_xdigit($value);
     }
 }

@@ -8,7 +8,7 @@ class Numeric extends AbstractFluentValidator
 {
     public function validate($value): bool
     {
-        if ($this->optional() === true) {
+        if ($this->optional($value) === true) {
             return true;
         }
         if (ctype_digit($value) === true) {

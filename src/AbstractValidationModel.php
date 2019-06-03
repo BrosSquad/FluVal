@@ -12,9 +12,6 @@ abstract class AbstractValidationModel
 
     use MemberWithDash;
 
-    public function __construct()
-    {
-    }
 
     /**
      * @param string $name

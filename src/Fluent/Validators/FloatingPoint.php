@@ -8,6 +8,6 @@ class FloatingPoint extends AbstractFluentValidator
 {
     public function validate($value): bool
     {
-        return $this->optional() ?? is_float($value);
+        return $this->optional($value) ?? is_float($value);
     }
 }
