@@ -1,11 +1,13 @@
 <?php
-
+declare(strict_types=1);
 
 namespace Dusan\PhpMvc\Validation\Fluent;
 
 
 use Dusan\PhpMvc\Validation\AbstractValidationModel;
-
+use \Dusan\PhpMvc\Validation\Fluent\IValidator;
+use Closure;
+use TypeError;
 /**
  * Class FluentValidator
  * @example "../../docs/Fluent/UserFluentValidator.php"
@@ -48,17 +50,37 @@ abstract class FluentValidator
     /**
      * Prepares validation for the given property in model
      *
-     * @param string $name
+     * @param string|Closure|callback $arg
+     * @param string|null
      *
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
+     * @throws TypeError
+     * @return Validation
      */
-    public final function forMember(string $name): Validation
+    public final function forMember($arg, ?string $name = NULL): Validation
     {
         $validator = new Validation();
-        $this->validations[$name] = [
-            'validation' => $validator,
-            'value' => $this->model->{$name},
-        ];
+        
+        $value = NULL;
+
+        if(is_string($arg)) {
+            $value = $arg;
+        } else if(is_callable($arg) || $arg instanceof Closure) {
+            $value = $arg($this->model, $name);
+        } else { 
+            throw new TypeError('First argument must be either callble or string');
+        }
+
+        if ($name !== NULL) {
+            $this->validations[$name] = [
+                'validation' => $validator,
+                'value' => $value,
+            ];
+        } else {
+            $this->validations[] = [
+                'validation' => $validator,
+                'value' => $value,
+            ];
+        }
 
         return $validator;
     }
@@ -79,11 +101,11 @@ abstract class FluentValidator
         foreach ($this->validations as $name => $v) {
             $value = $v['value'];
             /**
-             * @var \Dusan\PhpMvc\Validation\Fluent\Validation $validation
+             * @var Validation $validation
              */
             $validation = $v['validation'];
             foreach ($validation->getValidators() as $validator) {
-                /** @var \Dusan\PhpMvc\Validation\Fluent\IValidator $val */
+                /** @var IValidator $val */
                 $val = $validator['validator'];
                 $message = $validator['message'];
                 if ($val->validate($value) === false) {
@@ -102,5 +124,4 @@ abstract class FluentValidator
         }
         return count($errors) > 0 ? $errors : NULL;
     }
-
 }
