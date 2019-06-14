@@ -37,5 +37,8 @@ class UserFluentValidator extends FluentValidator
         $this->forMember('password')
             ->min(8)
             ->withMessage('Password must have at least 8 characters');
+
+        $this->forMember('password')
+            ->password();
     }
 }
