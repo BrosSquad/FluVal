@@ -88,6 +88,17 @@ MESSAGE;
         return $this->customValidator(new Password(), $message);
     }
 
+    public final function username(?string $message = null): Validation
+    {
+        if ($message === null) {
+          $message = <<<MESSAGE
+            Username can't contain special characters.
+
+MESSAGE;
+        }
+        return $this->customValidator(new Username(), $message);
+    }
+
     /**
      * Validator for Email
      *
