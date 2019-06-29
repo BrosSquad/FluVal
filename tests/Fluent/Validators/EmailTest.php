@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Tests\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Tests\Fluent\Validators;
 
 
-use Dusan\PhpMvc\Validation\Fluent\Validators\Email;
+use BrosSquad\FluVal\Fluent\Validators\Email;
 use PHPUnit\Framework\TestCase;
 
 class EmailTest extends TestCase

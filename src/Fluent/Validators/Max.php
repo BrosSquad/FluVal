@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Dusan\PhpMvc\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Fluent\Validators;
 
 
 use TypeError;

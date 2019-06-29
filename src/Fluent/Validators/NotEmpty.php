@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Fluent\Validators;
 
 
-use Dusan\PhpMvc\Validation\Fluent\IValidator;
+use BrosSquad\FluVal\Fluent\IValidator;
 
 class NotEmpty implements IValidator
 {

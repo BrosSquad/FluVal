@@ -1,8 +1,8 @@
 <?php
 
-namespace Dusan\PhpMvc\Tests\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Tests\Fluent\Validators;
 
-use Dusan\PhpMvc\Validation\Fluent\Validators\Username;
+use BrosSquad\FluVal\Fluent\Validators\Username;
 use PHPUnit\Framework\TestCase;
 
 class UsernameValidatonTest extends TestCase

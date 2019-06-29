@@ -1,6 +1,6 @@
 <?php
 
-namespace Dusan\PhpMvc\Validation;
+namespace BrosSquad\FluVal;
 
 
 abstract class ValidationModel extends AbstractValidationModel

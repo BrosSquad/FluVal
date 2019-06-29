@@ -1,16 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace Dusan\PhpMvc\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Fluent\Validators;
 
 
-use Dusan\PhpMvc\Validation\Fluent\IValidator;
+use BrosSquad\FluVal\Fluent\IValidator;
 
 
 /**
  *
  *
- * @package Dusan\PhpMvc\Validation\Fluent\Validators
+ * @package BrosSquad\FluVal\Fluent\Validators
  */
 abstract class AbstractFluentValidator implements IValidator
 {

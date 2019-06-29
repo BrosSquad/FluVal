@@ -8,9 +8,9 @@
 
 <?php
 
-use Dusan\PhpMvc\Validation\AbstractValidationModel;
-use Dusan\PhpMvc\Validation\Fluent\FluentValidator;
-use Dusan\PhpMvc\Validation\ValidationModel;
+use BrosSquad\FluVal\AbstractValidationModel;
+use BrosSquad\FluVal\Fluent\FluentValidator;
+use BrosSquad\FluVal\ValidationModel;
 
 // Define your models as ValidationModel
 class User extends ValidationModel
@@ -85,7 +85,7 @@ Example:
 <?php
 
 
-namespace Dusan\PhpMvc\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Fluent\Validators;
 
 
 use \Error;
@@ -126,11 +126,11 @@ class CustomValidator extends FluentValidator
             // customValidator method expects first parameter to
             // be of type IValidator interface which is
             // implemented by AbstractFluentValidator class
-            // Second parameter is the error message that will be 
+            // Second parameter is the error message that will be
             // returned in error array after calling the validate() method on
             // FluentValidator class
             ->customValidator(
-                new Pattern('your pattern', 'flags', 'regex delimiter'), 
+                new Pattern('your pattern', 'flags', 'regex delimiter'),
                 'Error message'
             );
     }

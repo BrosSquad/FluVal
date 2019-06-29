@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Dusan\PhpMvc\Validation;
+namespace BrosSquad\FluVal;
 
 use Carbon\Carbon;
 use Carbon\CarbonImmutable;
@@ -132,7 +132,7 @@ class Validator
      *
      * @return bool
      */
-    public function isAfter($item, DateTimeInterface $date, string $format = 'Y-m-d H:i:s')
+    public function isAfter($item, ?DateTimeInterface $date, string $format = 'Y-m-d H:i:s')
     {
         // Transform $date into Carbon object
         if ($date instanceof DateTimeInterface && !($date instanceof CarbonInterface)) {
@@ -158,7 +158,7 @@ class Validator
      *
      * @return bool
      */
-    public function isBefore($item, DateTimeInterface $date, string $format = 'Y-m-d H:i:s')
+    public function isBefore($item, ?DateTimeInterface $date, string $format = 'Y-m-d H:i:s')
     {
         // Transform $date into Carbon object
         if ($date instanceof DateTimeInterface && !($date instanceof CarbonInterface)) {

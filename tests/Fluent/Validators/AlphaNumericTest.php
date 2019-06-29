@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Tests\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Tests\Fluent\Validators;
 
 
-use Dusan\PhpMvc\Validation\Fluent\Validators\AlphaNumeric;
+use BrosSquad\FluVal\Fluent\Validators\AlphaNumeric;
 use PHPUnit\Framework\TestCase;
 
 class AlphaNumericTest extends TestCase

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Tests\Validation;
+namespace BrosSquad\FluVal\Tests;
 
 
-use Dusan\PhpMvc\Validation\Traits\MemberWithDash;
+use BrosSquad\FluVal\Traits\MemberWithDash;
 use PHPUnit\Framework\TestCase;
 
 class TestMemberWithDashTrait extends TestCase

@@ -1,18 +1,18 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Validation\Fluent;
+namespace BrosSquad\FluVal\Fluent;
 
 
 /**
  * Every Validator must implement IValidator interface
  * validate method is called by the library for every registered validator
  * There are two ways to create validators, first one is to implement the IValidator interface
- * the second is to extend the AbstractFluentValidator::class {@see \Dusan\PhpMvc\Validation\Fluent\Validators\AbstractFluentValidator}
+ * the second is to extend the AbstractFluentValidator::class {@see \BrosSquad\FluVal\Fluent\Validators\AbstractFluentValidator}
  *
  * @author Dusan Malusev
  * @api
- * @package Dusan\PhpMvc\Validation\Fluent
+ * @package BrosSquad\FluVal\Fluent
  */
 interface IValidator
 {

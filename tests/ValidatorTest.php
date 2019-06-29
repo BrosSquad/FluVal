@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Tests\Validation;
+namespace BrosSquad\FluVal\Tests;
 
 
 use Carbon\Carbon;
-use Dusan\PhpMvc\Validation\Validator;
+use BrosSquad\FluVal\Validator;
 use PHPUnit\Framework\TestCase;
 use TypeError;
 

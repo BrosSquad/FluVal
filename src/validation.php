@@ -1,6 +1,6 @@
 <?php
 
-namespace Dusan\PhpMvc\Validation;
+namespace BrosSquad\FluVal;
 
 /**
  * @version 1.0
@@ -11,7 +11,7 @@ namespace Dusan\PhpMvc\Validation;
  * These validators are ment to be uses in request validation, not in actual ValidationModels
  * Is you want Validation inside the ValidationModel use Fluent Validation which is more powerful and better
  * than it's counterpart Request validators
- * @see     \Dusan\PhpMvc\Validation\FluentOLD\ModelValidator
+ * @see     \BrosSquad\FluVal\FluentOLD\ModelValidator
  * <b> Fluent validation will be available in version 2</b>
  * <b>How to write custom validators</b>
  * <p>

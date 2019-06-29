@@ -1,12 +1,14 @@
 <?php
 
-namespace Dusan\PhpMvc\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Fluent\Validators;
 
-class Password  extends AbstractFluentValidator
+use BrosSquad\FluVal\Fluent\IValidator;
+
+class Password implements IValidator
 {
     public function validate($value): bool
     {
-        $regex = "#(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$#";
+        $regex = '#(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$#';
         return preg_match($regex ,$value);
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Tests\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Tests\Fluent\Validators;
 
 
-use Dusan\PhpMvc\Validation\Fluent\Validators\Password;
+use BrosSquad\FluVal\Fluent\Validators\Password;
 use PHPUnit\Framework\TestCase;
 
 class PasswordValidatorTest extends TestCase

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Validation;
+namespace BrosSquad\FluVal;
 
 
 class Sanitizer

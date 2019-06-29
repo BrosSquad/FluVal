@@ -304,23 +304,23 @@
   </component>
   <component name="RunManager" selected="PHPUnit.UsernameValidatonTest">
     <configuration name="FluentValidatorTest.test_fluent_validation" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Dusan\PhpMvc\Tests\Validation\Fluent\FluentValidatorTest" file="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" method="test_fluent_validation" scope="Method" />
+      <TestRunner class="BrosSquad\FluVal\Tests\Fluent\FluentValidatorTest" file="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" method="test_fluent_validation" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="FluentValidatorTest.test_fluent_validation_messages_on_error" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Dusan\PhpMvc\Tests\Validation\Fluent\FluentValidatorTest" file="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" method="test_fluent_validation_messages_on_error" scope="Method" />
+      <TestRunner class="BrosSquad\FluVal\Tests\Fluent\FluentValidatorTest" file="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" method="test_fluent_validation_messages_on_error" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="PasswordValidatorTest.test_password_validation_good_password" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Dusan\PhpMvc\Tests\Validation\Fluent\Validators\PasswordValidatorTest" file="$PROJECT_DIR$/tests/Fluent/Validators/PasswordValidatorTest.php" method="test_password_validation_good_password" scope="Method" />
+      <TestRunner class="BrosSquad\FluVal\Tests\Fluent\Validators\PasswordValidatorTest" file="$PROJECT_DIR$/tests/Fluent/Validators/PasswordValidatorTest.php" method="test_password_validation_good_password" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="UsernameValidatonTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Dusan\PhpMvc\Tests\Validation\Fluent\Validators\UsernameValidatonTest" file="$PROJECT_DIR$/tests/Fluent/Validators/UsernameValidationTest.php" scope="Class" />
+      <TestRunner class="BrosSquad\FluVal\Tests\Fluent\Validators\UsernameValidatonTest" file="$PROJECT_DIR$/tests/Fluent/Validators/UsernameValidationTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="UsernameValidatonTest.test_validation_good_username" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Dusan\PhpMvc\Tests\Validation\Fluent\Validators\UsernameValidatonTest" file="$PROJECT_DIR$/tests/Fluent/Validators/UsernameValidationTest.php" method="test_validation_good_username" scope="Method" />
+      <TestRunner class="BrosSquad\FluVal\Tests\Fluent\Validators\UsernameValidatonTest" file="$PROJECT_DIR$/tests/Fluent/Validators/UsernameValidationTest.php" method="test_validation_good_username" scope="Method" />
       <method v="2" />
     </configuration>
     <recent_temporary>

@@ -1,15 +1,13 @@
 <?php
 
+namespace BrosSquad\FluVal\Tests\Fluent;
 
-namespace Dusan\PhpMvc\Tests\Validation\Fluent;
-
-
-use Dusan\PhpMvc\Validation\AbstractValidationModel;
-use Dusan\PhpMvc\Validation\Fluent\FluentValidator;
+use BrosSquad\FluVal\Fluent\FluentValidator;
+use BrosSquad\FluVal\ValidationModel;
 
 class UserFluentValidator extends FluentValidator
 {
-    public function __construct(AbstractValidationModel $model)
+    public function __construct(ValidationModel $model)
     {
         parent::__construct($model);
         // Name validation

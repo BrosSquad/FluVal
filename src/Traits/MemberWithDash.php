@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Validation\Traits;
+namespace BrosSquad\FluVal\Traits;
 
 
 trait MemberWithDash

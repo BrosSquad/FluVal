@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Validation;
+namespace BrosSquad\FluVal;
 
 
 use Dusan\PhpMvc\Exceptions\PropertyNotFound;
-use Dusan\PhpMvc\Validation\Traits\MemberWithDash;
+use BrosSquad\FluVal\Traits\MemberWithDash;
 
 abstract class AbstractValidationModel
 {
@@ -35,7 +35,7 @@ abstract class AbstractValidationModel
      * @param string $name
      * @param mixed  $value
      *
-     * @throws \Dusan\PhpMvc\Validation\Exceptions\PropertyNotFound
+     * @throws \BrosSquad\FluVal\Exceptions\PropertyNotFound
      */
     public function __set(string $name, $value)
     {

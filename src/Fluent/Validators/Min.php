@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Dusan\PhpMvc\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Fluent\Validators;
 
 use TypeError;
 
@@ -9,7 +9,7 @@ use TypeError;
  * Class MinLength
  *
  * @author  Dusan Malusev
- * @package Dusan\PhpMvc\Validation\Fluent\Validators
+ * @package BrosSquad\FluVal\Fluent\Validators
  */
 class Min extends AbstractFluentValidator
 {
