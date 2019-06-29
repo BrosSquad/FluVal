@@ -1,8 +1,10 @@
 <?php
 
-namespace Dusan\PhpMvc\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Fluent\Validators;
 
-class Username extends AbstractFluentValidator
+use BrosSquad\FluVal\Fluent\IValidator;
+
+class Username implements IValidator
 {
     public function validate($value): bool
     {

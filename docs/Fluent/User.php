@@ -1,5 +1,5 @@
 <?php
-use Dusan\PhpMvc\Validation\ValidationModel;
+use BrosSquad\FluVal\ValidationModel;
 
 class User extends ValidationModel
 {

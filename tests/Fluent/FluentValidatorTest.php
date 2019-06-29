@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Tests\Validation\Fluent;
+namespace BrosSquad\FluVal\Tests\Fluent;
 
 
 

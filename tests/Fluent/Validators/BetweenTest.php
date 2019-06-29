@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Tests\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Tests\Fluent\Validators;
 
 
-use Dusan\PhpMvc\Validation\Fluent\Validators\Between;
+use BrosSquad\FluVal\Fluent\Validators\Between;
 use PHPUnit\Framework\TestCase;
 
 class BetweenTest extends TestCase

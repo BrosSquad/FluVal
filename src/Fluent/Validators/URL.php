@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Dusan\PhpMvc\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Fluent\Validators;
 
 
 class URL extends AbstractFluentValidator

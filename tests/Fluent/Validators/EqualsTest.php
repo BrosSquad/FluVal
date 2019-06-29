@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Dusan\PhpMvc\Tests\Validation\Fluent\Validators;
+namespace BrosSquad\FluVal\Tests\Fluent\Validators;
 
 
-use Dusan\PhpMvc\Validation\Fluent\Validators\Equals;
+use BrosSquad\FluVal\Fluent\Validators\Equals;
 use PHPUnit\Framework\TestCase;
 
 class EqualsTest extends TestCase

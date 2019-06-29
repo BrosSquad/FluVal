@@ -1,6 +1,6 @@
 {
-    "name": "dusan/php-mvc-fluent-validation",
-    "description": "Fluent validation for PhpMvc",
+    "name": "brossquad/fluval",
+    "description": "Fluent validation for PHP",
     "license": "GPL-2.0",
     "authors": [
         {
@@ -22,12 +22,12 @@
             "src/validation.php"
         ],
         "psr-4": {
-            "Dusan\\PhpMvc\\Validation\\": "src"
+            "BrosSquad\\FluVal\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Dusan\\PhpMvc\\Tests\\Validation\\": "tests/"
+            "BrosSquad\\FluVal\\Tests\\": "tests/"
         }
     },
     "repositories": [

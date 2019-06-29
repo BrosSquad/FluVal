@@ -1,29 +1,36 @@
 <?php
 declare(strict_types=1);
 
-namespace Dusan\PhpMvc\Validation\Fluent;
+namespace BrosSquad\FluVal\Fluent;
 
 
-use Dusan\PhpMvc\Validation\Fluent\Validators\{Alpha,
+use BrosSquad\FluVal\Fluent\Validators\{
+    Alpha,
     AlphaNumeric,
-    Between,
     Accepted,
     Email,
     ExactLength,
     FloatingPoint,
     Integer,
-    Max,
-    Min,
     NotEmpty,
-    Pattern};
+    Pattern
+};
+use BrosSquad\FluVal\Fluent\Traits\Length;
+use BrosSquad\FluVal\Fluent\Traits\Password;
+use BrosSquad\FluVal\Fluent\Traits\Username;
+use BrosSquad\FluVal\ValidationSet;
 
 /**
  * Class Validation
  *
- * @package Dusan\PhpMvc\Validation\Fluent
+ * @package BrosSquad\FluVal\Fluent
  */
 class Validation
 {
+    use Username;
+    use Password;
+    use Length;
+
     /**
      * Array containing instances of the IValidation interface
      * and the message that will be returned in the errors array
@@ -48,16 +55,17 @@ class Validation
      * @param IValidator  $validator
      * @param string|null $message
      *
-     * @see \Dusan\PhpMvc\Validation\Fluent\IValidator
-     * @see \Dusan\PhpMvc\Validation\Fluent\Validators\AbstractFluentValidator
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
+     * @see \BrosSquad\FluVal\Fluent\IValidator
+     * @see \BrosSquad\FluVal\Fluent\Validators\AbstractFluentValidator
+     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function customValidator(IValidator $validator, ?string $message = NULL): Validation
     {
-        $this->validations[] = [
-            'validator' => $validator,
-            'message' => $message,
-        ];
+        $this->validations[] = new ValidationSet($validator, $message);
+        // $this->validations[] = [
+        //     'validator' => $validator,
+        //     'message' => $message,
+        // ];
         $this->next();
         return $this;
     }
@@ -68,98 +76,33 @@ class Validation
      *
      * @param string $message
      *
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
+     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function withMessage(string $message): Validation
     {
-        $this->validations[$this->current]['message'] = $message;
+        $this->validations[$this->current]->message = $message;
         return $this;
     }
 
-    public final function password(?string $message = null): Validation
-    {
-        if ($message === null) {
-            $message = <<<MESSAGE
-            Password must contain at least one uppercase, one lowercase, one digit,
-            one special character and must be at least 8 characters long.
-
-MESSAGE;
-        }
-        return $this->customValidator(new Password(), $message);
-    }
-
-    public final function username(?string $message = null): Validation
-    {
-        if ($message === null) {
-          $message = <<<MESSAGE
-            Username can't contain special characters.
-
-MESSAGE;
-        }
-        return $this->customValidator(new Username(), $message);
-    }
 
     /**
      * Validator for Email
      *
-     * @see \Dusan\PhpMvc\Validation\Fluent\Validators\Email
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
+     * @see \BrosSquad\FluVal\Fluent\Validators\Email
+     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function email(): Validation
     {
         return $this->customValidator(new Email(), 'Email is not valid');
     }
 
-    /**
-     * Validator for validating the minimum value for string, arrays or any countable object
-     *
-     * @param $min
-     *
-     * @see \Dusan\PhpMvc\Validation\Fluent\Validators\Min
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
-     */
-    public final function min($min)
-    {
-        return $this->customValidator(new Min($min), 'Value must be bigger than ' . $min);
-    }
-
-    /**
-     * Validator for validating the maximum value for string, arrays or any countable object
-     *
-     * @param $max
-     *
-     * @see \Dusan\PhpMvc\Validation\Fluent\Validators\Max
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
-     */
-    public final function max($max): Validation
-    {
-        return $this->customValidator(new Max($max), 'Value must be smaller than ' . $max);
-    }
-
-    /**
-     * Validates string, array or any countable object, this method will return true
-     * only if $value is in boundaries of $min and $max
-     *
-     * @param int|float $min
-     * @param int|float $max
-     *
-     * @see \Dusan\PhpMvc\Validation\Fluent\Validators\Between
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
-     */
-    public final function length($min, $max): Validation
-    {
-        return $this->customValidator(
-            new Between($min, $max),
-            sprintf('Value must be between %d and %d', $min, $max)
-        );
-    }
 
     /**
      * This method will return true only if value is not empty()
      * Check the php docs to see, what is considered empty variable
      *
      * @see \empty()
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
+     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function notEmpty(): Validation
     {
@@ -170,9 +113,9 @@ MESSAGE;
      * Checks the $value for alpha characters
      * This method will return true if $value contains only alpha characters (a-z, A-Z)
      *
-     * @see \Dusan\PhpMvc\Validation\Fluent\Validators\Alpha
+     * @see \BrosSquad\FluVal\Fluent\Validators\Alpha
      * @see \ctype_alpha()
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
+     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function alpha(): Validation
     {
@@ -183,9 +126,9 @@ MESSAGE;
      * Checks the $value for alphanumeric characters
      * This method will return true if $value contains only alphanumeric characters (a-z, A-Z, 0-9)
      *
-     * @see \Dusan\PhpMvc\Validation\Fluent\Validators\AlphaNumeric
+     * @see \BrosSquad\FluVal\Fluent\Validators\AlphaNumeric
      * @see \ctype_alnum()
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
+     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function alphaNumeric(): Validation
     {
@@ -199,8 +142,8 @@ MESSAGE;
      * Checks if the $value is floating point number
      * WARNING: strings in floating point format are not considered a number
      *
-     * @see \Dusan\PhpMvc\Validation\Fluent\Validators\FloatingPoint
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
+     * @see \BrosSquad\FluVal\Fluent\Validators\FloatingPoint
+     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function float(): Validation
     {
@@ -214,8 +157,8 @@ MESSAGE;
      * Checks if the $value is integer
      * WARNING: strings in integer format are not considered a number
      *
-     * @see \Dusan\PhpMvc\Validation\Fluent\Validators\Integer
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
+     * @see \BrosSquad\FluVal\Fluent\Validators\Integer
+     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function int(): Validation
     {
@@ -233,8 +176,8 @@ MESSAGE;
      * @param string $flags
      * @param string $regexDelimiter
      *
-     * @see \Dusan\PhpMvc\Validation\Fluent\Validators\Pattern
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
+     * @see \BrosSquad\FluVal\Fluent\Validators\Pattern
+     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function pattern(
         string $pattern,
@@ -248,23 +191,11 @@ MESSAGE;
         );
     }
 
-    /**
-     * @param int $length
-     *
-     * @return \Dusan\PhpMvc\Validation\Fluent\Validation
-     */
-    public final function exactLength(int $length): Validation
-    {
-        return $this->customValidator(
-            new ExactLength($length),
-            'Value must be exactly ' . $length . ' long'
-        );
-    }
 
     /**
      * Return the array of registered validators and their error messages
      *
-     * @return array
+     * @return array<ValidationSet>
      */
     public final function getValidators(): array
     {

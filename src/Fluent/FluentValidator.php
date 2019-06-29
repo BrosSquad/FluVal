@@ -1,17 +1,19 @@
 <?php
 declare(strict_types=1);
 
-namespace Dusan\PhpMvc\Validation\Fluent;
+namespace BrosSquad\FluVal\Fluent;
 
 
-use Dusan\PhpMvc\Validation\AbstractValidationModel;
-use \Dusan\PhpMvc\Validation\Fluent\IValidator;
+use \BrosSquad\FluVal\Fluent\IValidator;
 use Closure;
 use TypeError;
+use BrosSquad\FluVal\ValidationModel;
+use BrosSquad\FluVal\ValidationSet;
+
 /**
  * Class FluentValidator
  * @example "../../docs/Fluent/UserFluentValidator.php"
- * @package Dusan\PhpMvc\Validation\Fluent
+ * @package BrosSquad\FluVal\Fluent
  */
 abstract class FluentValidator
 {
@@ -35,13 +37,16 @@ abstract class FluentValidator
     const BREAK_ON_ERROR_FULLY = 3;
 
     /**
-     * @var \Dusan\PhpMvc\Validation\Fluent\Validation
+     * @var \BrosSquad\FluVal\Fluent\Validation
      */
     protected $validations = [];
 
+    /**
+     * @var BrosSquad\FluVal\ValidationModel
+     */
     protected $model;
 
-    public function __construct(AbstractValidationModel $model)
+    public function __construct(ValidationModel $model)
     {
         $this->model = $model;
     }
@@ -59,27 +64,21 @@ abstract class FluentValidator
     public final function forMember($arg, ?string $name = NULL): Validation
     {
         $validator = new Validation();
-        
+
         $value = NULL;
 
         if(is_string($arg)) {
             $value = $arg;
         } else if(is_callable($arg) || $arg instanceof Closure) {
             $value = $arg($this->model, $name);
-        } else { 
+        } else {
             throw new TypeError('First argument must be either callble or string');
         }
 
         if ($name !== NULL) {
-            $this->validations[$name] = [
-                'validation' => $validator,
-                'value' => $value,
-            ];
+            $this->validations[$name] = new ValidationSet($validator, $value);
         } else {
-            $this->validations[] = [
-                'validation' => $validator,
-                'value' => $value,
-            ];
+            $this->validations[] = new ValidationSet($validator, $value);
         }
 
         return $validator;
@@ -99,15 +98,15 @@ abstract class FluentValidator
     {
         $errors = [];
         foreach ($this->validations as $name => $v) {
-            $value = $v['value'];
+            $value = $v->value;
             /**
              * @var Validation $validation
              */
-            $validation = $v['validation'];
+            $validation = $v->key;
             foreach ($validation->getValidators() as $validator) {
                 /** @var IValidator $val */
-                $val = $validator['validator'];
-                $message = $validator['message'];
+                $val = $validator->key;
+                $message = $validator->value;
                 if ($val->validate($value) === false) {
                     $errors[$name][] = $message;
                     // This could be &&, but for performance reasons it's split into two ifs
