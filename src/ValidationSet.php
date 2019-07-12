@@ -5,7 +5,8 @@ namespace BrosSquad\FluVal;
 use BrosSquad\FluVal\Fluent\IValidator;
 use Exception;
 
-class ValidationSet {
+class ValidationSet
+{
     private $key;
     private $value;
 
@@ -17,11 +18,21 @@ class ValidationSet {
 
     public function __get($name)
     {
-        if($name === 'key' || $name === 'value')
-        {
+        if ($name === 'key' || $name === 'value') {
             return $this->{$name};
         }
 
         throw new Exception('Property is not defined in class ValidationSet');
+    }
+
+    public function __set($name, $value)
+    {
+        if ($name === 'key' || $name === 'value') {
+            $this->{$name} = $value;
+            return;
+        }
+
+        throw new Exception('Property is not defined in class ValidationSet');
+
     }
 }

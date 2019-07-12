@@ -11,7 +11,9 @@ class UserFluentValidator extends FluentValidator
     {
         parent::__construct($model);
         // Name validation
-        $this->forMember('name')
+        $this->forMember('name', 'First Name')
+            ->notEmpty()
+            ->withMessage('Name must not be empty')
             ->min(3)
             ->withMessage('Name must have at least 3 characters')
             ->max(50)
@@ -22,21 +24,17 @@ class UserFluentValidator extends FluentValidator
             ->withMessage('Name must start with uppercase letter');
 
         // Email validation
-        $this->forMember('email')
+        $this->forMember('email', 'Email')
             ->min(5)
             ->withMessage('Email must have at least 5 characters')
             ->max(150)
             ->withMessage('Email cannot have more than 150 characters')
             ->email();
 
-        $this->forMember('accepted')
+        $this->forMember('accepted', 'accept')
             ->accepted();
 
-        $this->forMember('password')
-            ->min(8)
-            ->withMessage('Password must have at least 8 characters');
-
-        $this->forMember('password')
+        $this->forMember('password', 'Password')
             ->password();
     }
 }

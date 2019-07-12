@@ -2,6 +2,7 @@
 
 namespace BrosSquad\FluVal\Fluent\Traits;
 
+use BrosSquad\FluVal\Fluent\Validation;
 use BrosSquad\FluVal\Fluent\Validators\{Max, Min, Between, ExactLength};
 
 trait Length
@@ -14,7 +15,7 @@ trait Length
      * @see \BrosSquad\FluVal\Fluent\Validators\Min
      * @return \BrosSquad\FluVal\Fluent\Validation
      */
-    public final function min($min)
+    public final function min($min): Validation
     {
         return $this->customValidator(new Min($min), 'Value must be bigger than ' . $min);
     }

@@ -100,14 +100,14 @@ abstract class FluentValidator
         foreach ($this->validations as $name => $v) {
             $value = $v->value;
             /**
-             * @var Validation $validation
+             * @var \BrosSquad\FluVal\Fluent\Validation $validation
              */
             $validation = $v->key;
             foreach ($validation->getValidators() as $validator) {
                 /** @var IValidator $val */
                 $val = $validator->key;
                 $message = $validator->value;
-                if ($val->validate($value) === false) {
+                if ($val->validate($this->model->{$value}) === false) {
                     $errors[$name][] = $message;
                     // This could be &&, but for performance reasons it's split into two ifs
                     // Its better to compare two integers than to calculate the length of the array

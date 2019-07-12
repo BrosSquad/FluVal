@@ -1,23 +1,21 @@
 <?php
+
 declare(strict_types=1);
 
 namespace BrosSquad\FluVal\Fluent;
 
 
-use BrosSquad\FluVal\Fluent\Validators\{
-    Alpha,
-    AlphaNumeric,
-    Accepted,
-    Email,
-    ExactLength,
-    FloatingPoint,
-    Integer,
-    NotEmpty,
-    Pattern
-};
 use BrosSquad\FluVal\Fluent\Traits\Length;
+use BrosSquad\FluVal\Fluent\Traits\NotEmpty;
 use BrosSquad\FluVal\Fluent\Traits\Password;
 use BrosSquad\FluVal\Fluent\Traits\Username;
+use BrosSquad\FluVal\Fluent\Validators\Accepted;
+use BrosSquad\FluVal\Fluent\Validators\Alpha;
+use BrosSquad\FluVal\Fluent\Validators\AlphaNumeric;
+use BrosSquad\FluVal\Fluent\Validators\Email;
+use BrosSquad\FluVal\Fluent\Validators\FloatingPoint;
+use BrosSquad\FluVal\Fluent\Validators\Integer;
+use BrosSquad\FluVal\Fluent\Validators\Pattern;
 use BrosSquad\FluVal\ValidationSet;
 
 /**
@@ -30,13 +28,14 @@ class Validation
     use Username;
     use Password;
     use Length;
+    use NotEmpty;
 
     /**
      * Array containing instances of the IValidation interface
      * and the message that will be returned in the errors array
      * when data is processed
      *
-     * @var array
+     * @var array<ValidationSet>
      */
     protected $validations = [];
 
@@ -62,10 +61,6 @@ class Validation
     public final function customValidator(IValidator $validator, ?string $message = NULL): Validation
     {
         $this->validations[] = new ValidationSet($validator, $message);
-        // $this->validations[] = [
-        //     'validator' => $validator,
-        //     'message' => $message,
-        // ];
         $this->next();
         return $this;
     }
@@ -80,7 +75,7 @@ class Validation
      */
     public final function withMessage(string $message): Validation
     {
-        $this->validations[$this->current]->message = $message;
+        $this->validations[$this->current]->value = $message;
         return $this;
     }
 
@@ -96,18 +91,6 @@ class Validation
         return $this->customValidator(new Email(), 'Email is not valid');
     }
 
-
-    /**
-     * This method will return true only if value is not empty()
-     * Check the php docs to see, what is considered empty variable
-     *
-     * @see \empty()
-     * @return \BrosSquad\FluVal\Fluent\Validation
-     */
-    public final function notEmpty(): Validation
-    {
-        return $this->customValidator(new NotEmpty(), 'Value must not be empty');
-    }
 
     /**
      * Checks the $value for alpha characters
@@ -165,7 +148,8 @@ class Validation
         return $this->customValidator(new Integer(), 'Value must be integer');
     }
 
-    public final function accepted(): Validation {
+    public final function accepted(): Validation
+    {
         return $this->customValidator(new Accepted(), 'Value must be 1, yes, on or true');
     }
 
@@ -183,8 +167,7 @@ class Validation
         string $pattern,
         string $flags = '',
         string $regexDelimiter = '#'
-    ): Validation
-    {
+    ): Validation {
         return $this->customValidator(
             new Pattern($pattern, $flags, $regexDelimiter),
             'Value must match ' . $pattern
@@ -216,5 +199,4 @@ class Validation
     {
         return $this->validations[$this->current];
     }
-
 }
