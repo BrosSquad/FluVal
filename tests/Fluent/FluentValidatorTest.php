@@ -23,9 +23,17 @@ class FluentValidatorTest extends TestCase
         $errors = $fluentValidator->validate();
         $this->assertIsArray($errors);
         $this->assertCount(1, $errors);
-        $this->assertIsArray($errors['First Name']);
-        $this->assertCount(2, $errors['First Name']);
-        $this->assertEquals('Name must have at least 3 characters', $errors['First Name'][0]);
-        $this->assertEquals('Name must have at least 3 characters', $errors['First Name'][0]);
+        $this->assertIsArray($errors['FirstName']);
+        $this->assertCount(2, $errors['FirstName']);
+        $this->assertEquals('Name must have at least 3 characters', $errors['FirstName'][0]);
+        $this->assertEquals('Name must have at least 3 characters', $errors['FirstName'][0]);
+    }
+
+    public function test_fluent_on_valid_model()
+    {
+        $user = new User('Dusan', 'test@test.com', true, 'Pa$$w0rd');
+        $fluentValidator = new UserFluentValidator($user);
+        $errors = $fluentValidator->validate();
+        $this->assertNull($errors);
     }
 }

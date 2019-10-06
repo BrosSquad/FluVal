@@ -54,7 +54,7 @@ class ValidatorTest extends TestCase
         $this->expectException(TypeError::class);
         $yesterday = new Carbon('yesterday');
 
-        $this->assertTrue($this->validator->isBefore($yesterday, null));
+        $this->assertTrue($this->validator->isBefore(null, $yesterday));
     }
 
     public function test_is_after() {
@@ -68,7 +68,7 @@ class ValidatorTest extends TestCase
         $this->expectException(TypeError::class);
         $yesterday = new Carbon('yesterday');
 
-        $this->assertTrue($this->validator->isAfter($yesterday, null));
+        $this->assertFalse($this->validator->isAfter(null,$yesterday));
     }
 
     public function test_starts_with() {

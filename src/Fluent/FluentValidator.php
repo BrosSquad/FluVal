@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace BrosSquad\FluVal\Fluent;
 
 
-use \BrosSquad\FluVal\Fluent\IValidator;
 use Closure;
 use TypeError;
 use BrosSquad\FluVal\ValidationModel;
@@ -37,12 +36,13 @@ abstract class FluentValidator
     const BREAK_ON_ERROR_FULLY = 3;
 
     /**
-     * @var \BrosSquad\FluVal\Fluent\Validation
+     * @var Validation
      */
     protected $validations = [];
 
+
     /**
-     * @var BrosSquad\FluVal\ValidationModel
+     * @var ValidationModel
      */
     protected $model;
 
@@ -72,7 +72,7 @@ abstract class FluentValidator
         } else if(is_callable($arg) || $arg instanceof Closure) {
             $value = $arg($this->model, $name);
         } else {
-            throw new TypeError('First argument must be either callble or string');
+            throw new TypeError('First argument must be either callable or string');
         }
 
         if ($name !== NULL) {
@@ -100,7 +100,7 @@ abstract class FluentValidator
         foreach ($this->validations as $name => $v) {
             $value = $v->value;
             /**
-             * @var \BrosSquad\FluVal\Fluent\Validation $validation
+             * @var Validation $validation
              */
             $validation = $v->key;
             foreach ($validation->getValidators() as $validator) {
@@ -121,6 +121,6 @@ abstract class FluentValidator
                 }
             }
         }
-        return count($errors) > 0 ? $errors : NULL;
+        return isset($errors[array_key_first($errors)]) ? $errors : NULL;
     }
 }

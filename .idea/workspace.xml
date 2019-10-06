@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21d3758c-bc38-480e-a4c0-333dcb84721a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/PhpMvc-Validation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PhpMvc-Validation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fluent/FluentValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/FluentValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fluent/Traits/Length.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Traits/Length.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fluent/Traits/Password.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Traits/Password.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fluent/Validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ValidationSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ValidationSet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Email.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/FloatingPoint.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/FloatingPoint.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/IP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/IP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Integer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Integer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Numeric.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Numeric.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/URL.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/URL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Validator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Fluent/UserFluentValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Fluent/UserFluentValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Fluent/Validators/EmailTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Fluent/Validators/EmailTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ValidatorTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,144 +33,6 @@
       <executable path="composer" />
     </execution>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Fluent/UserFluentValidator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <element signature="e#189#1252#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-              <folding>
-                <element signature="e#53#97#0#PHP" expanded="true" />
-                <element signature="e#177#447#0#PHP" expanded="true" />
-                <element signature="e#453#1072#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestCase.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="1193" selection-start-line="1193" selection-end-line="1193" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Fluent/FluentValidator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="107" selection-start-line="107" selection-end-line="107" />
-              <folding>
-                <element signature="e#1129#1223#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Fluent/Traits/NotEmpty.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-              <folding>
-                <element signature="e#50#89#0#PHP" expanded="true" />
-                <element signature="e#370#517#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Fluent/Validators/NotEmptyTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="56" column="32" lean-forward="true" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
-              <folding>
-                <element signature="e#184#318#0#PHP" expanded="true" />
-                <element signature="e#333#393#0#PHP" expanded="true" />
-                <element signature="e#484#620#0#PHP" expanded="true" />
-                <element signature="e#632#783#0#PHP" expanded="true" />
-                <element signature="e#789#838#0#PHP" expanded="true" />
-                <element signature="e#931#967#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Fluent/Validation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="77" column="51" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
-              <folding>
-                <element signature="e#70#112#0#PHP" expanded="true" />
-                <element signature="e#1261#1487#0#PHP" expanded="true" />
-                <element signature="e#2046#2173#0#PHP" expanded="true" />
-                <element signature="e#2469#2629#0#PHP" expanded="true" />
-                <element signature="e#2950#3170#0#PHP" expanded="true" />
-                <element signature="e#3442#3628#0#PHP" expanded="true" />
-                <element signature="e#3873#4003#0#PHP" expanded="true" />
-                <element signature="e#4009#4156#0#PHP" expanded="true" />
-                <element signature="e#4462#4761#0#PHP" expanded="true" />
-                <element signature="e#4901#4992#0#PHP" expanded="true" />
-                <element signature="e#4998#5073#0#PHP" expanded="true" />
-                <element signature="e#5079#5164#0#PHP" expanded="true" />
-                <element signature="e#5170#5287#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ValidationSet.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-              <folding>
-                <element signature="e#274#498#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Fluent/IValidator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Min.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <element signature="e#387#556#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Pattern</find>
@@ -167,63 +40,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/AbstractValidator.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/MinLength.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Float.php" />
-        <option value="$PROJECT_DIR$/src/validation.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/IValidator.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/NotEmpty.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/AbstractFluentValidator.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Alpha.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/AlphaNumeric.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Between.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Email.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Equals.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/ExactLength.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/FloatingPoint.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/HexNumber.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/IP.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/LowerCase.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Integer.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Numeric.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/UpperCase.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/URL.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/Validators/AlphaTest.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/Validators/AlphaNumericTest.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Min.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Max.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/Validators/BetweenTest.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/Validators/EmailTest.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/Validators/EqualsTest.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/Validators/ExactLengthTest.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/Validators/UserFluentValidator.php" />
-        <option value="$PROJECT_DIR$/src/AbstractValidationModel.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/User.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Boolean.php" />
-        <option value="$PROJECT_DIR$/docs/Fluent/User.php" />
-        <option value="$PROJECT_DIR$/docs/Fluent/UserFluentValidator.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Pattern.php" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validators/Password.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/Validators/PasswordValidatorTest.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/Validators/UsernameValidationTest.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/tests/Fluent/Validators/NotEmptyTest.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Traits/NotEmpty.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Traits/Length.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Traits/Password.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/UserFluentValidator.php" />
-        <option value="$PROJECT_DIR$/src/ValidationSet.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/Validation.php" />
-        <option value="$PROJECT_DIR$/src/Fluent/FluentValidator.php" />
-        <option value="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" />
-      </list>
-    </option>
   </component>
   <component name="PhpServers">
     <servers />
@@ -266,75 +82,16 @@
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/2bj/phanybar" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/hassankhan/config" />
+      <path value="$PROJECT_DIR$/vendor/codedungeon/php-cli-colors" />
+      <path value="$PROJECT_DIR$/vendor/codedungeon/phpunit-result-printer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="466" />
-    <option name="y" value="-26" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FluVal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FluVal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FluVal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FluVal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FluVal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FluVal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Fluent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FluVal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FluVal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Fluent" type="462c0819:PsiDirectoryNode" />
-              <item name="Traits" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FluVal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FluVal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Fluent" type="462c0819:PsiDirectoryNode" />
-              <item name="Validators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FluVal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FluVal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Traits" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FluVal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FluVal" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FluVal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FluVal" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Fluent" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
+  <component name="ProjectId" id="1RpMupO6oroZbtB8CJCnlQMn0O2" />
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -369,34 +126,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.FluentValidatorTest.test_fluent_validation_messages_on_error">
-    <configuration name="FluentValidatorTest.test_fluent_validation" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="BrosSquad\FluVal\Tests\Fluent\FluentValidatorTest" file="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" method="test_fluent_validation" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.tests">
+    <configuration name="FluentValidatorTest.test_fluent_on_valid_model" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="BrosSquad\FluVal\Tests\Fluent\FluentValidatorTest" file="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" method="test_fluent_on_valid_model" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="FluentValidatorTest.test_fluent_validation_messages_on_error" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="BrosSquad\FluVal\Tests\Fluent\FluentValidatorTest" file="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" method="test_fluent_validation_messages_on_error" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="NotEmptyTest.test_null" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="BrosSquad\FluVal\Tests\Fluent\Validators\NotEmptyTest" file="$PROJECT_DIR$/tests/Fluent/Validators/NotEmptyTest.php" method="test_null" scope="Method" />
+    <configuration name="ValidatorTest.test_is_after_throws_error" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="BrosSquad\FluVal\Tests\ValidatorTest" file="$PROJECT_DIR$/tests/ValidatorTest.php" method="test_is_after_throws_error" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="NotEmptyTest.test_number" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="BrosSquad\FluVal\Tests\Fluent\Validators\NotEmptyTest" file="$PROJECT_DIR$/tests/Fluent/Validators/NotEmptyTest.php" method="test_number" scope="Method" />
+    <configuration name="ValidatorTest.test_is_before_throws_error" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="BrosSquad\FluVal\Tests\ValidatorTest" file="$PROJECT_DIR$/tests/ValidatorTest.php" method="test_is_before_throws_error" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="NotEmptyTest.test_object" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="BrosSquad\FluVal\Tests\Fluent\Validators\NotEmptyTest" file="$PROJECT_DIR$/tests/Fluent/Validators/NotEmptyTest.php" method="test_object" scope="Method" />
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/tests" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.ValidatorTest.test_is_after_throws_error" />
+        <item itemvalue="PHPUnit.ValidatorTest.test_is_before_throws_error" />
         <item itemvalue="PHPUnit.FluentValidatorTest.test_fluent_validation_messages_on_error" />
-        <item itemvalue="PHPUnit.FluentValidatorTest.test_fluent_validation" />
-        <item itemvalue="PHPUnit.NotEmptyTest.test_number" />
-        <item itemvalue="PHPUnit.NotEmptyTest.test_object" />
-        <item itemvalue="PHPUnit.NotEmptyTest.test_null" />
+        <item itemvalue="PHPUnit.FluentValidatorTest.test_fluent_on_valid_model" />
       </list>
     </recent_temporary>
   </component>
@@ -420,594 +177,25 @@
       <workItem from="1560504310932" duration="696000" />
       <workItem from="1561976774656" duration="23000" />
       <workItem from="1562538265348" duration="3549000" />
+      <workItem from="1570359813423" duration="5014000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="FluentValidatorTest_test_fluent_validation - 2019.07.08 at 00h 48m 27s.xml">
-      <configuration name="FluentValidatorTest.test_fluent_validation" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="FluentValidatorTest_test_fluent_validation - 2019.07.08 at 00h 50m 11s.xml">
-      <configuration name="FluentValidatorTest.test_fluent_validation" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="FluentValidatorTest_test_fluent_validation - 2019.07.08 at 00h 50m 14s.xml">
-      <configuration name="FluentValidatorTest.test_fluent_validation" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="FluentValidatorTest_test_fluent_validation_messages_on_error - 2019.07.08 at 00h 50m 20s.xml">
-      <configuration name="FluentValidatorTest.test_fluent_validation_messages_on_error" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="FluentValidatorTest_test_fluent_validation_messages_on_error - 2019.07.08 at 00h 50m 37s.xml">
-      <configuration name="FluentValidatorTest.test_fluent_validation_messages_on_error" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="FluentValidatorTest_test_fluent_validation_messages_on_error - 2019.07.08 at 00h 50m 54s.xml">
-      <configuration name="FluentValidatorTest.test_fluent_validation_messages_on_error" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="FluentValidatorTest_test_fluent_validation_messages_on_error - 2019.07.08 at 00h 51m 29s.xml">
-      <configuration name="FluentValidatorTest.test_fluent_validation_messages_on_error" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="FluentValidatorTest_test_fluent_validation_messages_on_error - 2019.07.08 at 00h 52m 07s.xml">
-      <configuration name="FluentValidatorTest.test_fluent_validation_messages_on_error" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="FluentValidatorTest_test_fluent_validation_messages_on_error - 2019.07.08 at 00h 52m 17s.xml">
-      <configuration name="FluentValidatorTest.test_fluent_validation_messages_on_error" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="FluentValidatorTest_test_fluent_validation_messages_on_error - 2019.07.08 at 00h 52m 58s.xml">
-      <configuration name="FluentValidatorTest.test_fluent_validation_messages_on_error" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32741000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22671841" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32606325" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32786885" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32975295" />
-      <window_info anchor="bottom" id="Tail" order="12" />
-      <window_info anchor="bottom" id="GraphQL" order="13" />
-      <window_info anchor="bottom" id="Quokka" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Json Parser" order="4" />
-      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25642672" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32851985" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997478" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32786885" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Tail" order="12" />
-      <window_info anchor="bottom" id="GraphQL" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Json Parser" order="4" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PhpMvc_Validation$FluentValidatorTest_test_fluent_validation_messages_on_error.xml" NAME="FluentValidatorTest.test_fluent_validation_messages_on_error Coverage Results" MODIFIED="1559593147060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ValidationModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="e#143#206#0#PHP" expanded="true" />
-            <element signature="e#212#283#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Validator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="185" column="33" selection-start-line="185" selection-start-column="33" selection-end-line="185" selection-end-column="33" />
-          <folding>
-            <element signature="e#2391#2469#0#PHP" expanded="true" />
-            <element signature="e#2475#2555#0#PHP" expanded="true" />
-            <element signature="e#2792#3637#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/AbstractFluentValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Alpha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="e#113#220#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/AlphaNumeric.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/ExactLength.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="e#427#836#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/FloatingPoint.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/IP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/HexNumber.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Integer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#116#197#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/LowerCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#140#247#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/NotEmpty.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#154#399#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Numeric.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/UpperCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/URL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#135#320#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/TestMemberWithDashTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-          <folding>
-            <element signature="e#51#101#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/Validators/BetweenTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2343">
-          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-          <folding>
-            <element signature="e#69#123#0#PHP" expanded="true" />
-            <element signature="e#198#356#0#PHP" expanded="true" />
-            <element signature="e#362#524#0#PHP" expanded="true" />
-            <element signature="e#530#699#0#PHP" expanded="true" />
-            <element signature="e#705#861#0#PHP" expanded="true" />
-            <element signature="e#867#1034#0#PHP" expanded="true" />
-            <element signature="e#1019#1072#0#PHP" expanded="true" />
-            <element signature="e#1086#1148#0#PHP" expanded="true" />
-            <element signature="e#1400#1458#0#PHP" expanded="true" />
-            <element signature="e#1578#1642#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/Validators/AlphaNumericTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="e#69#128#0#PHP" expanded="true" />
-            <element signature="e#197#356#0#PHP" expanded="true" />
-            <element signature="e#370#434#0#PHP" expanded="true" />
-            <element signature="e#579#655#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Equals.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="23" column="54" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding>
-            <element signature="e#135#213#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/Validators/ExactLengthTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="e#69#127#0#PHP" expanded="true" />
-            <element signature="e#147#204#0#PHP" expanded="true" />
-            <element signature="e#387#445#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/Validators/EqualsTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
-          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-          <folding>
-            <element signature="e#69#122#0#PHP" expanded="true" />
-            <element signature="e#196#353#0#PHP" expanded="true" />
-            <element signature="e#359#522#0#PHP" expanded="true" />
-            <element signature="e#529#663#0#PHP" expanded="true" />
-            <element signature="e#669#810#0#PHP" expanded="true" />
-            <element signature="e#816#953#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/Validators/EmailTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="e#69#121#0#PHP" expanded="true" />
-            <element signature="e#141#192#0#PHP" expanded="true" />
-            <element signature="e#357#410#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/Validators/AlphaTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#69#121#0#PHP" expanded="true" />
-            <element signature="e#194#353#0#PHP" expanded="true" />
-            <element signature="e#359#533#0#PHP" expanded="true" />
-            <element signature="e#539#708#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Between.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding>
-            <element signature="e#168#467#0#PHP" expanded="true" />
-            <element signature="e#473#716#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Accepted.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractValidationModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="e#45#90#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Max.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Email.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="644">
-            <caret line="134" column="12" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Pattern.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/Validators/UsernameValidationTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Username.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Fluent/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="6" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Fluent/UserFluentValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/Validators/PasswordValidatorTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#362#572#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Traits/Password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding>
-            <element signature="e#50#89#0#PHP" expanded="true" />
-            <element signature="e#141#468#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Traits/Length.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding>
-            <element signature="e#50#89#0#PHP" expanded="true" />
-            <element signature="e#773#920#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/UserFluentValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#189#1252#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/IValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Traits/NotEmpty.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="e#50#89#0#PHP" expanded="true" />
-            <element signature="e#370#517#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/Validators/NotEmptyTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="56" column="32" lean-forward="true" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
-          <folding>
-            <element signature="e#184#318#0#PHP" expanded="true" />
-            <element signature="e#333#393#0#PHP" expanded="true" />
-            <element signature="e#484#620#0#PHP" expanded="true" />
-            <element signature="e#632#783#0#PHP" expanded="true" />
-            <element signature="e#789#838#0#PHP" expanded="true" />
-            <element signature="e#931#967#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ValidationSet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding>
-            <element signature="e#274#498#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="77" column="51" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
-          <folding>
-            <element signature="e#70#112#0#PHP" expanded="true" />
-            <element signature="e#1261#1487#0#PHP" expanded="true" />
-            <element signature="e#2046#2173#0#PHP" expanded="true" />
-            <element signature="e#2469#2629#0#PHP" expanded="true" />
-            <element signature="e#2950#3170#0#PHP" expanded="true" />
-            <element signature="e#3442#3628#0#PHP" expanded="true" />
-            <element signature="e#3873#4003#0#PHP" expanded="true" />
-            <element signature="e#4009#4156#0#PHP" expanded="true" />
-            <element signature="e#4462#4761#0#PHP" expanded="true" />
-            <element signature="e#4901#4992#0#PHP" expanded="true" />
-            <element signature="e#4998#5073#0#PHP" expanded="true" />
-            <element signature="e#5079#5164#0#PHP" expanded="true" />
-            <element signature="e#5170#5287#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/Validators/Min.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#387#556#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fluent/FluentValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-          <folding>
-            <element signature="e#1129#1223#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/TestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="1193" selection-start-line="1193" selection-end-line="1193" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-          <folding>
-            <element signature="e#53#97#0#PHP" expanded="true" />
-            <element signature="e#177#447#0#PHP" expanded="true" />
-            <element signature="e#453#1072#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

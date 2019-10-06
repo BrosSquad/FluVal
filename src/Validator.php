@@ -158,11 +158,16 @@ class Validator
      *
      * @return bool
      */
-    public function isBefore($item, ?DateTimeInterface $date, string $format = 'Y-m-d H:i:s')
+    public function isBefore($item, ?DateTimeInterface $date = null, string $format = 'Y-m-d H:i:s')
     {
         // Transform $date into Carbon object
         if ($date instanceof DateTimeInterface && !($date instanceof CarbonInterface)) {
             $date = Carbon::instance($date);
+        }
+
+        if($date == null)
+        {
+            $date = Carbon::now();
         }
 
         if (is_string($item)) {

@@ -6,6 +6,13 @@ namespace BrosSquad\FluVal\Fluent\Validators;
 
 class Numeric extends AbstractFluentValidator
 {
+    protected $integerFlags;
+
+    public function __construct(int $integerFlags = Integer::HEX | Integer::OCTAL)
+    {
+        $this->integerFlags = $integerFlags;
+    }
+
     public function validate($value): bool
     {
         if ($this->optional($value) === true) {
@@ -14,6 +21,6 @@ class Numeric extends AbstractFluentValidator
         if (ctype_digit($value) === true) {
             return true;
         }
-        return is_int($value) || is_float($value);
+        return (new Integer($this->integerFlags))->validate($value) || (new FloatingPoint())->validate($value);
     }
 }

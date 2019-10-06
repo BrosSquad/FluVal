@@ -14,8 +14,14 @@ use BrosSquad\FluVal\Fluent\Validators\Alpha;
 use BrosSquad\FluVal\Fluent\Validators\AlphaNumeric;
 use BrosSquad\FluVal\Fluent\Validators\Email;
 use BrosSquad\FluVal\Fluent\Validators\FloatingPoint;
+use BrosSquad\FluVal\Fluent\Validators\HexNumber;
 use BrosSquad\FluVal\Fluent\Validators\Integer;
+use BrosSquad\FluVal\Fluent\Validators\IP;
+use BrosSquad\FluVal\Fluent\Validators\LowerCase;
+use BrosSquad\FluVal\Fluent\Validators\Numeric;
 use BrosSquad\FluVal\Fluent\Validators\Pattern;
+use BrosSquad\FluVal\Fluent\Validators\UpperCase;
+use BrosSquad\FluVal\Fluent\Validators\URL;
 use BrosSquad\FluVal\ValidationSet;
 
 /**
@@ -54,9 +60,9 @@ class Validation
      * @param IValidator  $validator
      * @param string|null $message
      *
+     * @return Validation
+     *@see \BrosSquad\FluVal\Fluent\Validators\AbstractFluentValidator
      * @see \BrosSquad\FluVal\Fluent\IValidator
-     * @see \BrosSquad\FluVal\Fluent\Validators\AbstractFluentValidator
-     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function customValidator(IValidator $validator, ?string $message = NULL): Validation
     {
@@ -71,7 +77,7 @@ class Validation
      *
      * @param string $message
      *
-     * @return \BrosSquad\FluVal\Fluent\Validation
+     * @return Validation
      */
     public final function withMessage(string $message): Validation
     {
@@ -83,8 +89,8 @@ class Validation
     /**
      * Validator for Email
      *
-     * @see \BrosSquad\FluVal\Fluent\Validators\Email
-     * @return \BrosSquad\FluVal\Fluent\Validation
+     * @return Validation
+     *@see \BrosSquad\FluVal\Fluent\Validators\Email
      */
     public final function email(): Validation
     {
@@ -96,9 +102,9 @@ class Validation
      * Checks the $value for alpha characters
      * This method will return true if $value contains only alpha characters (a-z, A-Z)
      *
+     * @return Validation
+     *@see \ctype_alpha()
      * @see \BrosSquad\FluVal\Fluent\Validators\Alpha
-     * @see \ctype_alpha()
-     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function alpha(): Validation
     {
@@ -109,9 +115,9 @@ class Validation
      * Checks the $value for alphanumeric characters
      * This method will return true if $value contains only alphanumeric characters (a-z, A-Z, 0-9)
      *
+     * @return Validation
+     *@see \ctype_alnum()
      * @see \BrosSquad\FluVal\Fluent\Validators\AlphaNumeric
-     * @see \ctype_alnum()
-     * @return \BrosSquad\FluVal\Fluent\Validation
      */
     public final function alphaNumeric(): Validation
     {
@@ -125,8 +131,8 @@ class Validation
      * Checks if the $value is floating point number
      * WARNING: strings in floating point format are not considered a number
      *
-     * @see \BrosSquad\FluVal\Fluent\Validators\FloatingPoint
-     * @return \BrosSquad\FluVal\Fluent\Validation
+     * @return Validation
+     *@see \BrosSquad\FluVal\Fluent\Validators\FloatingPoint
      */
     public final function float(): Validation
     {
@@ -140,12 +146,13 @@ class Validation
      * Checks if the $value is integer
      * WARNING: strings in integer format are not considered a number
      *
+     * @param int $flags
+     * @return Validation
      * @see \BrosSquad\FluVal\Fluent\Validators\Integer
-     * @return \BrosSquad\FluVal\Fluent\Validation
      */
-    public final function int(): Validation
+    public final function int(int $flags = Integer::OCTAL | Integer::HEX): Validation
     {
-        return $this->customValidator(new Integer(), 'Value must be integer');
+        return $this->customValidator(new Integer($flags), 'Value must be integer');
     }
 
     public final function accepted(): Validation
@@ -160,8 +167,8 @@ class Validation
      * @param string $flags
      * @param string $regexDelimiter
      *
-     * @see \BrosSquad\FluVal\Fluent\Validators\Pattern
-     * @return \BrosSquad\FluVal\Fluent\Validation
+     * @return Validation
+     *@see \BrosSquad\FluVal\Fluent\Validators\Pattern
      */
     public final function pattern(
         string $pattern,
@@ -173,6 +180,37 @@ class Validation
             'Value must match ' . $pattern
         );
     }
+
+
+    public final function url(): Validation
+    {
+        return $this->customValidator(new URL(), 'URL is not valid');
+    }
+
+    public final function hex(): Validation
+    {
+        return $this->customValidator(new HexNumber(), 'Number is not hexadecimal');
+    }
+
+    public final function ip(int $flags = IP::IPV4 | IP::IPV6): Validation
+    {
+        return $this->customValidator(new IP($flags), 'IP is not valid');
+    }
+
+    public final function lowerCase(): Validation
+    {
+        return $this->customValidator(new LowerCase(), 'String must be all lowercase');
+    }
+
+    public final function upperCase(): Validation
+    {
+        return $this->customValidator(new UpperCase(), 'String must be all uppercase');
+    }
+    public final function numeric(int $integerFlags = Integer::HEX | Integer::OCTAL): Validation
+    {
+        return $this->customValidator(new Numeric($integerFlags), 'Must be numeric type');
+    }
+
 
 
     /**

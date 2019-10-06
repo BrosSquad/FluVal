@@ -11,7 +11,7 @@ class UserFluentValidator extends FluentValidator
     {
         parent::__construct($model);
         // Name validation
-        $this->forMember('name', 'First Name')
+        $this->forMember('name', 'FirstName')
             ->notEmpty()
             ->withMessage('Name must not be empty')
             ->min(3)

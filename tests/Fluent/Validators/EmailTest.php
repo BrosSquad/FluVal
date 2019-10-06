@@ -12,12 +12,12 @@ class EmailTest extends TestCase
     public function test_valid_email() {
         $emailValidator = new Email();
 
-        $this->assertTrue($emailValidator->validate('test@test.com'));
+        $this->assertTrue($emailValidator->validate('dusan.998@outlook.com'));
     }
 
     public function test_invalid_email() {
         $emailValidator = new Email();
 
-        $this->assertFalse($emailValidator->validate('test@localhost'));
+        $this->assertFalse($emailValidator->validate('some random string that is not email'));
     }
 }
