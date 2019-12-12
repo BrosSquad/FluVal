@@ -4,8 +4,8 @@
 namespace BrosSquad\FluVal;
 
 
-use Dusan\PhpMvc\Exceptions\PropertyNotFound;
 use BrosSquad\FluVal\Traits\MemberWithDash;
+use BrosSquad\FluVal\Exceptions\PropertyNotFoundException;
 
 abstract class AbstractValidationModel
 {
@@ -14,6 +14,8 @@ abstract class AbstractValidationModel
 
 
     /**
+     * @throws \BrosSquad\FluVal\Exceptions\PropertyNotFoundException
+     *
      * @param string $name
      *
      * @return mixed
@@ -23,33 +25,42 @@ abstract class AbstractValidationModel
         $modified = $this->memberWithDash($name);
         if (method_exists($this, 'get' . $modified)) {
             return $this->{'get' . $modified}();
-        } else if (method_exists($this, 'is' . $modified)) {
+        }
+
+        if (method_exists($this, 'is' . $modified)) {
             return $this->{'is' . $modified}();
-        } else if (property_exists($this, $name)) {
+        }
+
+        if (property_exists($this, $name)) {
             return $this->{$name};
         }
-        throw new PropertyNotFound();
+
+        throw new PropertyNotFoundException("Property {$name} is not found");
     }
 
     /**
+     * @throws \BrosSquad\FluVal\Exceptions\PropertyNotFoundException
+     *
      * @param string $name
      * @param mixed  $value
      *
-     * @throws \BrosSquad\FluVal\Exceptions\PropertyNotFound
      */
     public function __set(string $name, $value)
     {
         $modified = $this->memberWithDash($name);
+
         if (method_exists($this, 'set' . $modified)) {
             $this->{'set' . $modified}($value);
             return;
-        } else if (property_exists($this, $name)) {
+        }
+
+        if (property_exists($this, $name)) {
             $this->{$name} = $value;
             return;
         }
-        throw new PropertyNotFound();
-    }
 
+        throw new PropertyNotFoundException("Property {$name} is not found");
+    }
 
 
 }

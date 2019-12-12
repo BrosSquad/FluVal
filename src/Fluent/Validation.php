@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace BrosSquad\FluVal\Fluent;
 
@@ -43,7 +43,7 @@ class Validation
      *
      * @var array<ValidationSet>
      */
-    protected $validations = [];
+    protected array $validations = [];
 
     /**
      * Tracker for current position of the validations array
@@ -51,7 +51,7 @@ class Validation
      *
      * @var int
      */
-    private $current = -1;
+    private int $current = -1;
 
     /**
      * Registers custom validation class and it's message that will be returned in errors array
@@ -61,10 +61,10 @@ class Validation
      * @param string|null $message
      *
      * @return Validation
-     *@see \BrosSquad\FluVal\Fluent\Validators\AbstractFluentValidator
+     * @see \BrosSquad\FluVal\Fluent\Validators\AbstractFluentValidator
      * @see \BrosSquad\FluVal\Fluent\IValidator
      */
-    public final function customValidator(IValidator $validator, ?string $message = NULL): Validation
+    final public function customValidator(IValidator $validator, ?string $message = null): Validation
     {
         $this->validations[] = new ValidationSet($validator, $message);
         $this->next();
@@ -90,7 +90,7 @@ class Validation
      * Validator for Email
      *
      * @return Validation
-     *@see \BrosSquad\FluVal\Fluent\Validators\Email
+     * @see \BrosSquad\FluVal\Fluent\Validators\Email
      */
     public final function email(): Validation
     {
@@ -103,7 +103,7 @@ class Validation
      * This method will return true if $value contains only alpha characters (a-z, A-Z)
      *
      * @return Validation
-     *@see \ctype_alpha()
+     * @see \ctype_alpha()
      * @see \BrosSquad\FluVal\Fluent\Validators\Alpha
      */
     public final function alpha(): Validation
@@ -116,7 +116,7 @@ class Validation
      * This method will return true if $value contains only alphanumeric characters (a-z, A-Z, 0-9)
      *
      * @return Validation
-     *@see \ctype_alnum()
+     * @see \ctype_alnum()
      * @see \BrosSquad\FluVal\Fluent\Validators\AlphaNumeric
      */
     public final function alphaNumeric(): Validation
@@ -132,7 +132,7 @@ class Validation
      * WARNING: strings in floating point format are not considered a number
      *
      * @return Validation
-     *@see \BrosSquad\FluVal\Fluent\Validators\FloatingPoint
+     * @see \BrosSquad\FluVal\Fluent\Validators\FloatingPoint
      */
     public final function float(): Validation
     {
@@ -147,6 +147,7 @@ class Validation
      * WARNING: strings in integer format are not considered a number
      *
      * @param int $flags
+     *
      * @return Validation
      * @see \BrosSquad\FluVal\Fluent\Validators\Integer
      */
@@ -168,7 +169,7 @@ class Validation
      * @param string $regexDelimiter
      *
      * @return Validation
-     *@see \BrosSquad\FluVal\Fluent\Validators\Pattern
+     * @see \BrosSquad\FluVal\Fluent\Validators\Pattern
      */
     public final function pattern(
         string $pattern,
@@ -206,11 +207,11 @@ class Validation
     {
         return $this->customValidator(new UpperCase(), 'String must be all uppercase');
     }
+
     public final function numeric(int $integerFlags = Integer::HEX | Integer::OCTAL): Validation
     {
         return $this->customValidator(new Numeric($integerFlags), 'Must be numeric type');
     }
-
 
 
     /**

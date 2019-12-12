@@ -3,7 +3,11 @@
 namespace BrosSquad\FluVal\Fluent\Traits;
 
 use BrosSquad\FluVal\Fluent\Validation;
-use BrosSquad\FluVal\Fluent\Validators\{Max, Min, Between, ExactLength};
+use BrosSquad\FluVal\Fluent\Validators\{
+    Max,
+    Min,
+    Between,
+    ExactLength};
 
 trait Length
 {
@@ -12,10 +16,10 @@ trait Length
      *
      * @param $min
      *
-     * @see \BrosSquad\FluVal\Fluent\Validators\Min
      * @return \BrosSquad\FluVal\Fluent\Validation
+     * @see \BrosSquad\FluVal\Fluent\Validators\Min
      */
-    public final function min($min): Validation
+    final public function min($min): Validation
     {
         return $this->customValidator(new Min($min), 'Value must be bigger than ' . $min);
     }
@@ -25,10 +29,10 @@ trait Length
      *
      * @param $max
      *
-     * @see \BrosSquad\FluVal\Fluent\Validators\Max
      * @return \BrosSquad\FluVal\Fluent\Validation
+     * @see \BrosSquad\FluVal\Fluent\Validators\Max
      */
-    public final function max($max): Validation
+    final public function max($max): Validation
     {
         return $this->customValidator(new Max($max), 'Value must be smaller than ' . $max);
     }
@@ -40,10 +44,10 @@ trait Length
      * @param int|float $min
      * @param int|float $max
      *
-     * @see \BrosSquad\FluVal\Fluent\Validators\Between
      * @return \BrosSquad\FluVal\Fluent\Validation
+     * @see \BrosSquad\FluVal\Fluent\Validators\Between
      */
-    public final function length($min, $max): Validation
+    final public function length($min, $max): Validation
     {
         return $this->customValidator(
             new Between($min, $max),
@@ -51,12 +55,12 @@ trait Length
         );
     }
 
-     /**
+    /**
      * @param int $length
      *
      * @return \BrosSquad\FluVal\Fluent\Validation
      */
-    public final function exactLength(int $length): Validation
+    final public function exactLength(int $length): Validation
     {
         return $this->customValidator(
             new ExactLength($length),

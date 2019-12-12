@@ -2,8 +2,7 @@
 
 namespace BrosSquad\FluVal;
 
-use BrosSquad\FluVal\Fluent\IValidator;
-use Exception;
+use Error;
 
 class ValidationSet
 {
@@ -16,15 +15,28 @@ class ValidationSet
         $this->value = $value;
     }
 
+    /**
+     * @throws \Error
+     *
+     * @param $name
+     *
+     * @return mixed
+     */
     public function __get($name)
     {
         if ($name === 'key' || $name === 'value') {
             return $this->{$name};
         }
 
-        throw new Exception('Property is not defined in class ValidationSet');
+        throw new Error('Property is not defined in class ValidationSet');
     }
 
+    /**
+     * @throws \Error
+     *
+     * @param $value
+     * @param $name
+     */
     public function __set($name, $value)
     {
         if ($name === 'key' || $name === 'value') {
@@ -32,7 +44,6 @@ class ValidationSet
             return;
         }
 
-        throw new Exception('Property is not defined in class ValidationSet');
-
+        throw new Error('Property is not defined in class ValidationSet');
     }
 }

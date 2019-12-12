@@ -11,10 +11,11 @@ class ExactLength extends AbstractFluentValidator
     /**
      * @var int
      */
-    private $length;
+    private int $length;
 
-    public function __construct(int $length)
+    public function __construct(int $length, bool $required = false)
     {
+        parent::__construct($required);
         $this->length = $length;
     }
 
@@ -31,10 +32,12 @@ class ExactLength extends AbstractFluentValidator
         }
         if (is_string($value)) {
             return mb_strlen($value) === $this->length;
-        } else if (is_countable($value)) {
-            return count($value) === $this->length;
-        } else {
-            throw new TypeError('$value must be string or countable');
         }
+
+        if (is_countable($value)) {
+            return count($value) === $this->length;
+        }
+
+        throw new TypeError('$value must be string or countable');
     }
 }

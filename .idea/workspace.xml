@@ -2,26 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21d3758c-bc38-480e-a4c0-333dcb84721a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/PropertyNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Traits/Optional.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PhpMvc-Validation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PhpMvc-Validation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AbstractValidationModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractValidationModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fluent/FluentValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/FluentValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Traits/Length.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Traits/Length.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Traits/NotEmpty.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Traits/NotEmpty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Traits/Password.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Traits/Password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Traits/Username.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Traits/Username.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fluent/Validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/AbstractFluentValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/AbstractFluentValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Accepted.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Accepted.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Between.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Between.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Email.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Equals.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Equals.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/ExactLength.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/ExactLength.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/FloatingPoint.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/FloatingPoint.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/IP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/IP.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Integer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Integer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Max.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Max.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Min.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Min.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/NotEmpty.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/NotEmpty.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Numeric.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Numeric.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Password.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Pattern.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Pattern.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/URL.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/URL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fluent/Validators/Username.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fluent/Validators/Username.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sanitizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sanitizer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traits/MemberWithDash.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/MemberWithDash.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ValidationModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ValidationModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ValidationSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ValidationSet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Validator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Fluent/FluentValidatorTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Fluent/UserFluentValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Fluent/UserFluentValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Fluent/Validators/EmailTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Fluent/Validators/EmailTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ValidatorTest.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,10 +108,17 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1RpMupO6oroZbtB8CJCnlQMn0O2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.github.shiraji.findpullrequest.model.FindPullRequestConfig.HOSTING" value="GitHub" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -113,18 +136,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Projects\PhpMvc-Validation\tests\Fluent" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="PHPUnit.tests">
     <configuration name="FluentValidatorTest.test_fluent_on_valid_model" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -157,6 +168,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -178,6 +201,8 @@
       <workItem from="1561976774656" duration="23000" />
       <workItem from="1562538265348" duration="3549000" />
       <workItem from="1570359813423" duration="5014000" />
+      <workItem from="1576061154001" duration="3115000" />
+      <workItem from="1576141457507" duration="739000" />
     </task>
     <servers />
   </component>
@@ -189,11 +214,27 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="661" y="357" width="675" height="392" key="NewPhpClassDialog" timestamp="1576061287388">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="661" y="357" width="675" height="392" key="NewPhpClassDialog/0.28.1920.1052/1920.0.1920.1080@0.28.1920.1052" timestamp="1576061287388" />
+    <state x="615" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1576141927236">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="615" y="381" key="com.intellij.ide.util.TipDialog/0.28.1920.1052/1920.0.1920.1080@0.28.1920.1052" timestamp="1576141927236" />
+    <state x="624" y="254" key="run.anything.popup" timestamp="1576063463878">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="624" y="254" key="run.anything.popup/0.28.1920.1052/1920.0.1920.1080@0.28.1920.1052" timestamp="1576063463878" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PhpMvc_Validation$FluentValidatorTest_test_fluent_validation_messages_on_error.xml" NAME="FluentValidatorTest.test_fluent_validation_messages_on_error Coverage Results" MODIFIED="1559593147060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

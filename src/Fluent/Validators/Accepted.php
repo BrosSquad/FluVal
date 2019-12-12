@@ -14,8 +14,10 @@ class Accepted extends AbstractFluentValidator
      */
     public function validate($value): bool
     {
-        if ($this->optional($value) === true) return true;
-        if (is_bool($value)) return true;
+        if (is_bool($value) && $this->optional($value) === true) {
+            return true;
+        }
+
         switch ($value) {
             case 'yes':
             case 'on':

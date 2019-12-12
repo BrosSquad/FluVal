@@ -1,5 +1,6 @@
 <?php
-declare(strict_types=1);
+
+declare(strict_types = 1);
 
 namespace BrosSquad\FluVal\Fluent\Validators;
 
@@ -8,8 +9,8 @@ use TypeError;
 /**
  * Class MinLength
  *
- * @author  Dusan Malusev
  * @package BrosSquad\FluVal\Fluent\Validators
+ * @author  Dusan Malusev
  */
 class Min extends AbstractFluentValidator
 {
@@ -23,10 +24,12 @@ class Min extends AbstractFluentValidator
      * MinLength constructor.
      *
      * @param int|float|double $min
+     * @param bool             $required
      */
-    public function __construct($min)
+    public function __construct($min, bool $required = false)
     {
-        if(!is_numeric($min)) {
+        parent::__construct($required);
+        if (!is_numeric($min)) {
             throw new TypeError('Min must be number');
         }
         $this->min = $min;
@@ -40,14 +43,20 @@ class Min extends AbstractFluentValidator
     {
         if ($this->optional($value) === true) {
             return true;
-        } else if (is_string($value)) {
-            return mb_strlen($value) > $this->min;
-        } else if (is_countable($value)) {
-            return count($value) > $this->min;
-        } else if (is_numeric($value)) {
-            return $value > $this->min;
-        } else {
-            throw new TypeError('Value must be array, string or number');
         }
+
+        if (is_string($value)) {
+            return mb_strlen($value) > $this->min;
+        }
+
+        if (is_countable($value)) {
+            return count($value) > $this->min;
+        }
+
+        if (is_numeric($value)) {
+            return $value > $this->min;
+        }
+
+        throw new TypeError('Value must be array, string or number');
     }
 }

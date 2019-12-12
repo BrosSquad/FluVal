@@ -11,92 +11,182 @@ use TypeError;
 
 class Validator
 {
+    /**
+     * @param string $str
+     *
+     * @return bool
+     */
     public function isAlpha(string $str): bool
     {
         return ctype_alpha($str);
     }
 
+    /**
+     * @param string $str
+     *
+     * @return bool
+     */
     public function isNumeric(string $str): bool
     {
         return ctype_digit($str);
     }
 
+    /**
+     * @param string $str
+     *
+     * @return bool
+     */
     public function isAlphaNumeric(string $str): bool
     {
         return ctype_alnum($str);
     }
 
+    /**
+     * @param string $str
+     *
+     * @return bool
+     */
     public function isLowerCase(string $str): bool
     {
         return ctype_lower($str);
     }
 
+    /**
+     * @param string $str
+     *
+     * @return bool
+     */
     public function isUpperCase(string $str): bool
     {
         return ctype_upper($str);
     }
 
+    /**
+     * @param string $str
+     *
+     * @return bool
+     */
     public function isHex(string $str): bool
     {
         return ctype_xdigit($str);
     }
 
+    /**
+     * @param $var
+     *
+     * @return bool
+     */
     public function isBoolean($var): bool
     {
         return filter_var($var, FILTER_VALIDATE_BOOLEAN);
     }
 
+    /**
+     * @param string $email
+     *
+     * @return bool
+     */
     public function isEmail(string $email): bool
     {
         return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
     }
 
+    /**
+     * @param string $ip
+     *
+     * @return bool
+     */
     public function isIp(string $ip): bool
     {
         return filter_var($ip, FILTER_VALIDATE_IP) !== false;
     }
 
+    /**
+     * @param string $ip
+     *
+     * @return bool
+     */
     public function isIpv4(string $ip): bool
     {
         return filter_var($ip) !== false;
     }
 
+    /**
+     * @param string $ip
+     *
+     * @return bool
+     */
     public function isIpv6(string $ip): bool
     {
         return filter_var($ip) !== false;
     }
 
+    /**
+     * @param string $url
+     *
+     * @return bool
+     */
     public function isUrl(string $url): bool
     {
         return filter_var($url, FILTER_VALIDATE_URL) !== false;
     }
 
+    /**
+     * @param string $mac
+     *
+     * @return bool
+     */
     public function isMacAddress(string $mac): bool
     {
         return filter_var($mac, FILTER_VALIDATE_MAC) !== false;
     }
 
+    /**
+     * @param string $domain
+     *
+     * @return bool
+     */
     public function isDomain(string $domain): bool
     {
         return filter_var($domain, FILTER_VALIDATE_DOMAIN) !== false;
     }
 
-    public function isInteger($item)
+    /**
+     * @param $item
+     *
+     * @return bool
+     */
+    public function isInteger($item): bool
     {
         return is_int($item);
     }
 
-    public function isInfinite($item)
+    /**
+     * @param $item
+     *
+     * @return bool
+     */
+    public function isInfinite($item): bool
     {
         return is_infinite($item);
     }
 
-    public function isFloat($item)
+    /**
+     * @param $item
+     *
+     * @return bool
+     */
+    public function isFloat($item): bool
     {
         return is_float($item);
     }
 
-    public function isString($item)
+    /**
+     * @param $item
+     *
+     * @return bool
+     */
+    public function isString($item): bool
     {
         return is_string($item);
     }
@@ -109,15 +199,18 @@ class Validator
      */
     public function startsWith(string $str, string $checkString): bool
     {
-        for($i = 0; $i < strlen($checkString); $i++) {
-            if($str[$i] !== $checkString[$i]) return false;
+        $len = strlen($checkString);
+        for($i = 0; $i < $len; $i++) {
+            if($str[$i] !== $checkString[$i]) {
+                return false;
+            }
         }
         return true;
     }
 
     public function isNull($item): bool
     {
-        return is_null($item);
+        return $item === null;
     }
 
     public function isArray($item): bool
@@ -132,7 +225,7 @@ class Validator
      *
      * @return bool
      */
-    public function isAfter($item, ?DateTimeInterface $date, string $format = 'Y-m-d H:i:s')
+    public function isAfter($item, ?DateTimeInterface $date, string $format = 'Y-m-d H:i:s'): bool
     {
         // Transform $date into Carbon object
         if ($date instanceof DateTimeInterface && !($date instanceof CarbonInterface)) {

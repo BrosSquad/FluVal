@@ -8,8 +8,9 @@ class Equals extends AbstractFluentValidator
 {
     private $value;
 
-    public function __construct($value)
+    public function __construct($value, bool $required = false)
     {
+        parent::__construct($required);
         $this->value = $value;
     }
 

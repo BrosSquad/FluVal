@@ -5,7 +5,7 @@ namespace BrosSquad\FluVal;
 
 abstract class ValidationModel extends AbstractValidationModel
 {
-    protected $token = null;
+    protected $token;
 
     public function getToken() {
         return $this->token;

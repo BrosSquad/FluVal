@@ -14,7 +14,7 @@ trait NotEmpty
      * @see \empty()
      * @return \BrosSquad\FluVal\Fluent\Validation
      */
-    public final function notEmpty(): Validation
+    final public function notEmpty(): Validation
     {
         return $this->customValidator(new NotEmptyValidator(), 'Value must not be empty');
     }

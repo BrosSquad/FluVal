@@ -8,10 +8,16 @@ use \Error;
 
 class Pattern extends AbstractFluentValidator
 {
-    private $regex;
+    private string $regex;
 
-    public function __construct(string $pattern, string $flags = '', string $regexDelimiter = '#')
-    {
+    public function __construct(
+        string $pattern,
+        string $flags = '',
+        string $regexDelimiter = '#',
+        bool $required =
+        false
+    ) {
+        parent::__construct($required);
         $this->regex = $regexDelimiter . $pattern . $regexDelimiter . $flags;
     }
 
@@ -22,8 +28,12 @@ class Pattern extends AbstractFluentValidator
      */
     public function validate($value): bool
     {
-        if(($match = preg_match($this->regex, $value)) === false) {
-            throw new Error('Regex is not valid');
+        if ($this->optional($value) === true) {
+            return true;
+        }
+
+        if (($match = preg_match($this->regex, $value)) === false) {
+            throw new Error(preg_last_error());
         }
 
         return $match === 1;

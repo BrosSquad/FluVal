@@ -11,7 +11,8 @@ trait MemberWithDash
      *
      * @return string
      */
-    protected function memberWithDash(string $name) {
+    protected function memberWithDash(string $name): string
+    {
         $members = explode('_', $name);
         $newName = '';
         foreach($members as $member) {

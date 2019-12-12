@@ -1,35 +1,36 @@
 {
-    "name": "brossquad/fluval",
-    "description": "Fluent validation for PHP",
-    "license": "GPL-2.0",
-    "authors": [
-        {
-            "name": "Dusan Malusev",
-            "email": "dusan.998@outlook.com"
-        }
-    ],
-    "require": {
-        "php": ">=7.3.0",
-        "ext-ctype": "*",
-        "nesbot/carbon": "^2.18.0",
-        "dusan/php-mvc-collections": "^1.1.1",
-        "egulias/email-validator": "^2.1"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^8.1",
-        "codedungeon/phpunit-result-printer": "^0.26.2"
-    },
-    "autoload": {
-        "files": [
-            "src/validation.php"
-        ],
-        "psr-4": {
-            "BrosSquad\\FluVal\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "BrosSquad\\FluVal\\Tests\\": "tests/"
-        }
+  "name": "brossquad/fluval",
+  "description": "Fluent validation for PHP",
+  "license": "GPL-2.0",
+  "authors": [
+    {
+      "name": "Dusan Malusev",
+      "email": "dusan.998@outlook.com"
     }
+  ],
+  "require": {
+    "php": ">=7.4.0",
+    "ext-ctype": "*",
+    "ext-mbstring": "*",
+    "nesbot/carbon": "^2.18.0",
+    "dusan/php-mvc-collections": "^1.1.1",
+    "egulias/email-validator": "^2.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.1",
+    "codedungeon/phpunit-result-printer": "^0.26.2"
+  },
+  "autoload": {
+    "files": [
+      "src/validation.php"
+    ],
+    "psr-4": {
+      "BrosSquad\\FluVal\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "BrosSquad\\FluVal\\Tests\\": "tests/"
+    }
+  }
 }

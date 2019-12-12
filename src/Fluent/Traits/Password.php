@@ -7,7 +7,7 @@ use BrosSquad\FluVal\Fluent\Validators\Password as PasswordValidator;
 
 trait Password
 {
-    public final function password(): Validation
+    final public function password(): Validation
     {
         $message = <<<MESSAGE
             Password must contain at least one uppercase, one lowercase, one digit,

@@ -1,5 +1,6 @@
 <?php
-declare(strict_types=1);
+
+declare(strict_types = 1);
 
 namespace BrosSquad\FluVal\Fluent;
 
@@ -11,8 +12,9 @@ use BrosSquad\FluVal\ValidationSet;
 
 /**
  * Class FluentValidator
- * @example "../../docs/Fluent/UserFluentValidator.php"
+ *
  * @package BrosSquad\FluVal\Fluent
+ * @example "../../docs/Fluent/UserFluentValidator.php"
  */
 abstract class FluentValidator
 {
@@ -22,29 +24,29 @@ abstract class FluentValidator
      *
      * This is default behaviour
      */
-    const CONTINUE_ON_ERROR = 1;
+    public const CONTINUE_ON_ERROR = 1;
 
     /**
      * If error is occurred it wil be added into errors, but validation on that same
      * value will stop, and next value will be fetched, process repeats
      */
-    const BREAK_ON_ERROR = 2;
+    public const BREAK_ON_ERROR = 2;
 
     /**
      * As soon as any error occurred whole loop is stopped and error is returned
      */
-    const BREAK_ON_ERROR_FULLY = 3;
+    public const BREAK_ON_ERROR_FULLY = 3;
 
     /**
-     * @var Validation
+     * @var array<\BrosSquad\FluVal\Fluent\Validation>
      */
-    protected $validations = [];
+    protected array $validations = [];
 
 
     /**
      * @var ValidationModel
      */
-    protected $model;
+    protected ValidationModel $model;
 
     public function __construct(ValidationModel $model)
     {
@@ -55,27 +57,29 @@ abstract class FluentValidator
     /**
      * Prepares validation for the given property in model
      *
-     * @param string|Closure|callback $arg
+     * @throws TypeError
+     *
      * @param string|null
      *
-     * @throws TypeError
+     * @param string|Closure|callback|null $arg
+     *
      * @return Validation
      */
-    public final function forMember($arg, ?string $name = NULL): Validation
+    final public function forMember($arg, $name = null): Validation
     {
         $validator = new Validation();
 
-        $value = NULL;
+        $value = null;
 
-        if(is_string($arg)) {
+        if (is_string($arg)) {
             $value = $arg;
-        } else if(is_callable($arg) || $arg instanceof Closure) {
+        } elseif (is_callable($arg) || $arg instanceof Closure) {
             $value = $arg($this->model, $name);
         } else {
             throw new TypeError('First argument must be either callable or string');
         }
 
-        if ($name !== NULL) {
+        if ($name !== null) {
             $this->validations[$name] = new ValidationSet($validator, $value);
         } else {
             $this->validations[] = new ValidationSet($validator, $value);
@@ -94,7 +98,7 @@ abstract class FluentValidator
      *
      * @return array|null
      */
-    public final function validate(int $flag = self::CONTINUE_ON_ERROR): ?array
+    final public function validate(int $flag = self::CONTINUE_ON_ERROR): ?array
     {
         $errors = [];
         foreach ($this->validations as $name => $v) {
@@ -112,15 +116,15 @@ abstract class FluentValidator
                     // This could be &&, but for performance reasons it's split into two ifs
                     // Its better to compare two integers than to calculate the length of the array
                     // on each loop
-                    if ($flag === self::BREAK_ON_ERROR_FULLY) {
-                        if (count($errors) > 0) {
-                            return $errors;
-                        }
+                    if (($flag === self::BREAK_ON_ERROR_FULLY) && count($errors) > 0) {
+                        return $errors;
                     }
-                    if ($flag === self::BREAK_ON_ERROR) break;
+                    if ($flag === self::BREAK_ON_ERROR) {
+                        break;
+                    }
                 }
             }
         }
-        return isset($errors[array_key_first($errors)]) ? $errors : NULL;
+        return isset($errors[array_key_first($errors)]) ? $errors : null;
     }
 }
