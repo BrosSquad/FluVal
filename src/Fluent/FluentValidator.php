@@ -103,19 +103,17 @@ abstract class FluentValidator
         $errors = [];
         foreach ($this->validations as $name => $v) {
             $value = $v->value;
-            /**
-             * @var Validation $validation
-             */
+
+            /** @var Validation $validation*/
             $validation = $v->key;
             foreach ($validation->getValidators() as $validator) {
+
                 /** @var IValidator $val */
                 $val = $validator->key;
                 $message = $validator->value;
                 if ($val->validate($this->model->{$value}) === false) {
                     $errors[$name][] = $message;
-                    // This could be &&, but for performance reasons it's split into two ifs
-                    // Its better to compare two integers than to calculate the length of the array
-                    // on each loop
+
                     if (($flag === self::BREAK_ON_ERROR_FULLY) && count($errors) > 0) {
                         return $errors;
                     }

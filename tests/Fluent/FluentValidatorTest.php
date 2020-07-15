@@ -8,32 +8,32 @@ use PHPUnit\Framework\TestCase;
 
 class FluentValidatorTest extends TestCase
 {
-    public function test_fluent_validation()
+    public function test_fluent_validation(): void
     {
-        $user = new User('Dusan', 'test@test.com', true, 'Pa$$w0rd');
+        $user = new User('Dusan', 'test@test.com', true, 'password123');
         $fluentValidator = new UserFluentValidator($user);
 
-        $this->assertNull($fluentValidator->validate(FluentValidator::BREAK_ON_ERROR));
+        self::assertNull($fluentValidator->validate(FluentValidator::BREAK_ON_ERROR));
     }
 
-    public function test_fluent_validation_messages_on_error()
+    public function test_fluent_validation_messages_on_error(): void
     {
-        $user = new User('D', 'test@test.com', true, 'Pa$$w0rd');
+        $user = new User('D', 'test@test.com', true, 'password123');
         $fluentValidator = new UserFluentValidator($user);
         $errors = $fluentValidator->validate();
-        $this->assertIsArray($errors);
-        $this->assertCount(1, $errors);
-        $this->assertIsArray($errors['FirstName']);
-        $this->assertCount(2, $errors['FirstName']);
-        $this->assertEquals('Name must have at least 3 characters', $errors['FirstName'][0]);
-        $this->assertEquals('Name must have at least 3 characters', $errors['FirstName'][0]);
+        self::assertIsArray($errors);
+        self::assertCount(1, $errors);
+        self::assertIsArray($errors['FirstName']);
+        self::assertCount(2, $errors['FirstName']);
+        self::assertEquals('Name must have at least 3 characters', $errors['FirstName'][0]);
+        self::assertEquals('Name must have at least 3 characters', $errors['FirstName'][0]);
     }
 
-    public function test_fluent_on_valid_model()
+    public function test_fluent_on_valid_model(): void
     {
-        $user = new User('Dusan', 'test@test.com', true, 'Pa$$w0rd');
+        $user = new User('Dusan', 'test@test.com', true, 'password123');
         $fluentValidator = new UserFluentValidator($user);
         $errors = $fluentValidator->validate();
-        $this->assertNull($errors);
+        self::assertNull($errors);
     }
 }

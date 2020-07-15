@@ -12,18 +12,15 @@
     "php": ">=7.4.0",
     "ext-ctype": "*",
     "ext-mbstring": "*",
-    "nesbot/carbon": "^2.18.0",
+    "nesbot/carbon": "^2.36.1",
     "dusan/php-mvc-collections": "^1.1.1",
-    "egulias/email-validator": "^2.1"
+    "egulias/email-validator": "^2.1.18"
   },
   "require-dev": {
-    "phpunit/phpunit": "^8.1",
-    "codedungeon/phpunit-result-printer": "^0.26.2"
+    "phpunit/phpunit": "^9.2.6",
+    "codedungeon/phpunit-result-printer": "^0.28.0"
   },
   "autoload": {
-    "files": [
-      "src/validation.php"
-    ],
     "psr-4": {
       "BrosSquad\\FluVal\\": "src"
     }

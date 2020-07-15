@@ -79,7 +79,7 @@ class Validation
      *
      * @return Validation
      */
-    public final function withMessage(string $message): Validation
+    final public function withMessage(string $message): Validation
     {
         $this->validations[$this->current]->value = $message;
         return $this;
@@ -92,7 +92,7 @@ class Validation
      * @return Validation
      * @see \BrosSquad\FluVal\Fluent\Validators\Email
      */
-    public final function email(): Validation
+    final public function email(): Validation
     {
         return $this->customValidator(new Email(), 'Email is not valid');
     }
@@ -106,7 +106,7 @@ class Validation
      * @see \ctype_alpha()
      * @see \BrosSquad\FluVal\Fluent\Validators\Alpha
      */
-    public final function alpha(): Validation
+    final public function alpha(): Validation
     {
         return $this->customValidator(new Alpha(), 'Value must contain only alpha characters (a-z, A-Z)');
     }
@@ -119,7 +119,7 @@ class Validation
      * @see \ctype_alnum()
      * @see \BrosSquad\FluVal\Fluent\Validators\AlphaNumeric
      */
-    public final function alphaNumeric(): Validation
+    final public function alphaNumeric(): Validation
     {
         return $this->customValidator(
             new AlphaNumeric(),
@@ -134,7 +134,7 @@ class Validation
      * @return Validation
      * @see \BrosSquad\FluVal\Fluent\Validators\FloatingPoint
      */
-    public final function float(): Validation
+    final public function float(): Validation
     {
         return $this->customValidator(
             new FloatingPoint(),
@@ -151,12 +151,12 @@ class Validation
      * @return Validation
      * @see \BrosSquad\FluVal\Fluent\Validators\Integer
      */
-    public final function int(int $flags = Integer::OCTAL | Integer::HEX): Validation
+    final public function int(int $flags = Integer::OCTAL | Integer::HEX): Validation
     {
         return $this->customValidator(new Integer($flags), 'Value must be integer');
     }
 
-    public final function accepted(): Validation
+    final public function accepted(): Validation
     {
         return $this->customValidator(new Accepted(), 'Value must be 1, yes, on or true');
     }
@@ -171,7 +171,7 @@ class Validation
      * @return Validation
      * @see \BrosSquad\FluVal\Fluent\Validators\Pattern
      */
-    public final function pattern(
+    final public function pattern(
         string $pattern,
         string $flags = '',
         string $regexDelimiter = '#'
@@ -183,32 +183,32 @@ class Validation
     }
 
 
-    public final function url(): Validation
+    final public function url(): Validation
     {
         return $this->customValidator(new URL(), 'URL is not valid');
     }
 
-    public final function hex(): Validation
+    final public function hex(): Validation
     {
         return $this->customValidator(new HexNumber(), 'Number is not hexadecimal');
     }
 
-    public final function ip(int $flags = IP::IPV4 | IP::IPV6): Validation
+    final public function ip(int $flags = IP::IPV4 | IP::IPV6): Validation
     {
         return $this->customValidator(new IP($flags), 'IP is not valid');
     }
 
-    public final function lowerCase(): Validation
+    final public function lowerCase(): Validation
     {
         return $this->customValidator(new LowerCase(), 'String must be all lowercase');
     }
 
-    public final function upperCase(): Validation
+    final public function upperCase(): Validation
     {
         return $this->customValidator(new UpperCase(), 'String must be all uppercase');
     }
 
-    public final function numeric(int $integerFlags = Integer::HEX | Integer::OCTAL): Validation
+    final public function numeric(int $integerFlags = Integer::HEX | Integer::OCTAL): Validation
     {
         return $this->customValidator(new Numeric($integerFlags), 'Must be numeric type');
     }
@@ -219,22 +219,22 @@ class Validation
      *
      * @return array<ValidationSet>
      */
-    public final function getValidators(): array
+    final public function getValidators(): array
     {
         return $this->validations;
     }
 
-    protected final function next(): void
+    final protected function next(): void
     {
         $this->current++;
     }
 
-    protected final function getCurrent(): int
+    final protected function getCurrent(): int
     {
         return $this->current;
     }
 
-    protected final function getCurrentValidation(): array
+    final protected function getCurrentValidation(): array
     {
         return $this->validations[$this->current];
     }

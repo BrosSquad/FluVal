@@ -11,9 +11,10 @@ class TestMemberWithDashTrait extends TestCase
 {
     use MemberWithDash;
 
-    public function test_member_with_dash() {
+    public function test_member_with_dash(): void
+    {
         $this->expectOutputString('SomeMemberWithDashes');
 
-        echo $this->memberWithDash('some_member_with_dashes');
+        echo $this->memberWithUnderscore('some_member_with_dashes');
     }
 }

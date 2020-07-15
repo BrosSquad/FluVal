@@ -11,7 +11,7 @@ trait MemberWithDash
      *
      * @return string
      */
-    protected function memberWithDash(string $name): string
+    protected function memberWithUnderscore(string $name): string
     {
         $members = explode('_', $name);
         $newName = '';
